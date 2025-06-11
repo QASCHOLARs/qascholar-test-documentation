@@ -1,0 +1,271 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.15 Chrome/134.0.6998.205 Electron/35.2.1 Safari/537.36" version="26.2.15" pages="4">
+  <diagram id="WBweFGNQKUQeWtfyckFX" name="Architecture">
+    <mxGraphModel dx="1973" dy="689" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="GkXE19n-aq0wxK2fDRrD-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;flowAnimation=1;" edge="1" parent="1" source="2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="284" y="252" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="264" y="252" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2" value="Selenium Client Library" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="59" y="222" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GkXE19n-aq0wxK2fDRrD-2" value="Browser Server&lt;div&gt;(HTTP Server)&lt;/div&gt;&lt;div&gt;(&lt;i&gt;Listens on 9515 port&lt;/i&gt;)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="282" y="222" width="120" height="71" as="geometry" />
+        </mxCell>
+        <mxCell id="GkXE19n-aq0wxK2fDRrD-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;flowAnimation=1;" edge="1" parent="1" source="GkXE19n-aq0wxK2fDRrD-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="107" y="218" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GkXE19n-aq0wxK2fDRrD-3" value="WebDriver API" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="162" y="103" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GkXE19n-aq0wxK2fDRrD-4" value="&lt;ul&gt;&lt;li&gt;Java&lt;/li&gt;&lt;li&gt;Python&lt;/li&gt;&lt;li&gt;Java Script&lt;/li&gt;&lt;li&gt;Ruby&lt;/li&gt;&lt;li&gt;.Net/C#&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="28" y="271" width="174" height="127" as="geometry" />
+        </mxCell>
+        <mxCell id="GkXE19n-aq0wxK2fDRrD-13" value="&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;ChromeDriver&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;GeckoDriver&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;EdgeDriver&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;SafariDriver&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;IEDriverServer&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="255" y="271" width="174" height="127" as="geometry" />
+        </mxCell>
+        <mxCell id="GkXE19n-aq0wxK2fDRrD-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;flowAnimation=1;" edge="1" parent="1" source="GkXE19n-aq0wxK2fDRrD-19" target="GkXE19n-aq0wxK2fDRrD-21">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="241" y="435" />
+              <mxPoint x="241" y="435" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GkXE19n-aq0wxK2fDRrD-24" value="Converts the script into&amp;nbsp;&lt;div&gt;HTTP Commands&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontStyle=2" vertex="1" connectable="0" parent="GkXE19n-aq0wxK2fDRrD-22">
+          <mxGeometry x="0.0544" relative="1" as="geometry">
+            <mxPoint x="-3" y="27" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GkXE19n-aq0wxK2fDRrD-19" value="Selenium Script" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.document;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="62" y="385" width="107" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="GkXE19n-aq0wxK2fDRrD-20" value="Designed scripts using the client libraries" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="-12.5" y="491" width="255" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="GkXE19n-aq0wxK2fDRrD-21" value="Selenium Script" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.document;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="288.5" y="389" width="107" height="100" as="geometry" />
+        </mxCell>
+        <UserObject label="driver.get(&quot;https://example.com&quot;);" link="driver.get(&quot;https://example.com&quot;);" id="GkXE19n-aq0wxK2fDRrD-25">
+          <mxCell style="text;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+            <mxGeometry x="13" y="526.9966870117188" width="205" height="36" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="POST /session/{sessionId}/url&#xa;{&#xa;  &quot;url&quot;: &quot;https://example.com&quot;&#xa;}" link="POST /session/{sessionId}/url&#xa;{&#xa;  &quot;url&quot;: &quot;https://example.com&quot;&#xa;}" id="GkXE19n-aq0wxK2fDRrD-26">
+          <mxCell style="text;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+            <mxGeometry x="273" y="523.9966870117188" width="187" height="80" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="GkXE19n-aq0wxK2fDRrD-27" value="&lt;b&gt;&lt;u&gt;Firerox Browser&lt;/u&gt;&lt;/b&gt;&lt;div&gt;(Marionette Protocol)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="822" y="125" width="190" height="67" as="geometry" />
+        </mxCell>
+        <mxCell id="GkXE19n-aq0wxK2fDRrD-28" value="&lt;b&gt;&lt;u&gt;Chrome Browser&lt;/u&gt;&lt;/b&gt;&lt;div&gt;(Chrome DevTools Server)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="824" y="214.5" width="188" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="GkXE19n-aq0wxK2fDRrD-29" value="&lt;b&gt;&lt;u&gt;Edge Browser&lt;/u&gt;&lt;/b&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));&quot;&gt;(Chrome DevTools Server)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="824" y="303" width="188" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="GkXE19n-aq0wxK2fDRrD-30" value="&lt;b&gt;Safari Browser&lt;/b&gt;&lt;div&gt;(WebKit Remote Debugging Protocol)&lt;b&gt;&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="826" y="387" width="188" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GkXE19n-aq0wxK2fDRrD-32" value="Selenium Script" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.document;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="564" y="391" width="107" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="GkXE19n-aq0wxK2fDRrD-35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;flowAnimation=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="395.5" y="442.5" as="sourcePoint" />
+            <mxPoint x="554" y="443" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="467.5" y="442.5" />
+              <mxPoint x="467.5" y="442.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GkXE19n-aq0wxK2fDRrD-36" value="Converts the script into&amp;nbsp;&lt;div&gt;Browser Native Commands&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontStyle=2" vertex="1" connectable="0" parent="GkXE19n-aq0wxK2fDRrD-35">
+          <mxGeometry x="0.0544" relative="1" as="geometry">
+            <mxPoint x="11" y="32" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="{&#xa;  &quot;method&quot;: &quot;Page.navigate&quot;,&#xa;  &quot;params&quot;: {&#xa;    &quot;url&quot;: &quot;https://example.com&quot;&#xa;  }&#xa;}" link="{&#xa;  &quot;method&quot;: &quot;Page.navigate&quot;,&#xa;  &quot;params&quot;: {&#xa;    &quot;url&quot;: &quot;https://example.com&quot;&#xa;  }&#xa;}" id="GkXE19n-aq0wxK2fDRrD-38">
+          <mxCell style="text;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+            <mxGeometry x="533.9966259765625" y="517.0033129882812" width="186" height="108" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="GkXE19n-aq0wxK2fDRrD-40" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;flowAnimation=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="406" y="251.5" as="sourcePoint" />
+            <mxPoint x="780" y="252" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="476" y="251.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GkXE19n-aq0wxK2fDRrD-41" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;flowAnimation=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="616" y="387" as="sourcePoint" />
+            <mxPoint x="781" y="266" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="613" y="266" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zaAtNCAkJqnbsfX8qOx8-2" value="web application" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="1183" y="217.5" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="zaAtNCAkJqnbsfX8qOx8-4" value="" style="shape=crossbar;whiteSpace=wrap;html=1;rounded=1;direction=south;" vertex="1" parent="1">
+          <mxGeometry x="779" y="125" width="20" height="323" as="geometry" />
+        </mxCell>
+        <mxCell id="zaAtNCAkJqnbsfX8qOx8-6" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=api" vertex="1" parent="1">
+          <mxGeometry x="991" y="233" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="zaAtNCAkJqnbsfX8qOx8-7" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=api" vertex="1" parent="1">
+          <mxGeometry x="994" y="134.5" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="zaAtNCAkJqnbsfX8qOx8-8" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=api" vertex="1" parent="1">
+          <mxGeometry x="994" y="311.5" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="zaAtNCAkJqnbsfX8qOx8-9" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=api" vertex="1" parent="1">
+          <mxGeometry x="997" y="393" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="zaAtNCAkJqnbsfX8qOx8-10" value="Browser DOM APIs &lt;span style=&quot;font-weight: normal;&quot;&gt;(Low Level)&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=3" vertex="1" parent="1">
+          <mxGeometry x="1047" y="143.5" width="141" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zaAtNCAkJqnbsfX8qOx8-11" value="Browser DOM APIs&amp;nbsp;&lt;span style=&quot;font-weight: normal;&quot;&gt;(Low Level)&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=3" vertex="1" parent="1">
+          <mxGeometry x="1040" y="248" width="151" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zaAtNCAkJqnbsfX8qOx8-12" value="Browser DOM APIs&amp;nbsp;&lt;span style=&quot;font-weight: normal;&quot;&gt;(Low Level)&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=3" vertex="1" parent="1">
+          <mxGeometry x="1047" y="320.5" width="144" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zaAtNCAkJqnbsfX8qOx8-13" value="Browser DOM APIs&amp;nbsp;&lt;span style=&quot;font-weight: normal;&quot;&gt;(Low Level)&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=3" vertex="1" parent="1">
+          <mxGeometry x="1054" y="406" width="146" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="OYA-SJrq5ZP1GQd8NT-6" name="Session Handling">
+    <mxGraphModel dx="786" dy="482" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="TngaxpVupLJ24Yud-ZNx-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;flowAnimation=1;" edge="1" parent="1" source="TngaxpVupLJ24Yud-ZNx-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="284" y="252" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="264" y="252" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TngaxpVupLJ24Yud-ZNx-35" value="Run the Script" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="TngaxpVupLJ24Yud-ZNx-1">
+          <mxGeometry x="-0.1048" relative="1" as="geometry">
+            <mxPoint x="1" y="-22" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TngaxpVupLJ24Yud-ZNx-2" value="Selenium Client Library" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="59" y="222" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="TngaxpVupLJ24Yud-ZNx-3" value="Browser Server&lt;div&gt;(HTTP Server)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="315" y="218.5" width="120" height="71" as="geometry" />
+        </mxCell>
+        <mxCell id="TngaxpVupLJ24Yud-ZNx-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;flowAnimation=1;" edge="1" parent="1" source="TngaxpVupLJ24Yud-ZNx-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="107" y="218" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TngaxpVupLJ24Yud-ZNx-5" value="WebDriver API" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="162" y="103" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TngaxpVupLJ24Yud-ZNx-6" value="&lt;ul&gt;&lt;li&gt;Java&lt;/li&gt;&lt;li&gt;Python&lt;/li&gt;&lt;li&gt;Java Script&lt;/li&gt;&lt;li&gt;Ruby&lt;/li&gt;&lt;li&gt;.Net/C#&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="28" y="271" width="174" height="127" as="geometry" />
+        </mxCell>
+        <mxCell id="TngaxpVupLJ24Yud-ZNx-7" value="&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;ChromeDriver&amp;nbsp;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;GeckoDriver&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;EdgeDriver&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;SafariDriver&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;IEDriverServer&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="291" y="305" width="174" height="127" as="geometry" />
+        </mxCell>
+        <mxCell id="TngaxpVupLJ24Yud-ZNx-15" value="&lt;b&gt;&lt;u&gt;Firerox Browser&lt;/u&gt;&lt;/b&gt;&lt;div&gt;(Marionette Protocol)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="822" y="125" width="190" height="67" as="geometry" />
+        </mxCell>
+        <mxCell id="TngaxpVupLJ24Yud-ZNx-16" value="&lt;b&gt;&lt;u&gt;Chrome Browser&lt;/u&gt;&lt;/b&gt;&lt;div&gt;(Chrome DevTools Server)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="824" y="214.5" width="188" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="TngaxpVupLJ24Yud-ZNx-17" value="&lt;b&gt;&lt;u&gt;Edge Browser&lt;/u&gt;&lt;/b&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));&quot;&gt;(Chrome DevTools Server)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="824" y="303" width="188" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="TngaxpVupLJ24Yud-ZNx-18" value="&lt;b&gt;Safari Browser&lt;/b&gt;&lt;div&gt;(WebKit Remote Debugging Protocol)&lt;b&gt;&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="826" y="387" width="188" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="TngaxpVupLJ24Yud-ZNx-23" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;flowAnimation=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="406" y="251.5" as="sourcePoint" />
+            <mxPoint x="780" y="252" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="476" y="251.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TngaxpVupLJ24Yud-ZNx-25" value="web application" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="1183" y="217.5" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="TngaxpVupLJ24Yud-ZNx-26" value="" style="shape=crossbar;whiteSpace=wrap;html=1;rounded=1;direction=south;" vertex="1" parent="1">
+          <mxGeometry x="779" y="125" width="20" height="323" as="geometry" />
+        </mxCell>
+        <mxCell id="TngaxpVupLJ24Yud-ZNx-27" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=api" vertex="1" parent="1">
+          <mxGeometry x="991" y="233" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="TngaxpVupLJ24Yud-ZNx-28" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=api" vertex="1" parent="1">
+          <mxGeometry x="994" y="134.5" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="TngaxpVupLJ24Yud-ZNx-29" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=api" vertex="1" parent="1">
+          <mxGeometry x="994" y="311.5" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="TngaxpVupLJ24Yud-ZNx-30" value="" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;prIcon=api" vertex="1" parent="1">
+          <mxGeometry x="997" y="393" width="50" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="TngaxpVupLJ24Yud-ZNx-31" value="Browser DOM APIs &lt;span style=&quot;font-weight: normal;&quot;&gt;(Low Level)&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=3" vertex="1" parent="1">
+          <mxGeometry x="1047" y="143.5" width="141" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TngaxpVupLJ24Yud-ZNx-32" value="Browser DOM APIs&amp;nbsp;&lt;span style=&quot;font-weight: normal;&quot;&gt;(Low Level)&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=3" vertex="1" parent="1">
+          <mxGeometry x="1040" y="248" width="151" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TngaxpVupLJ24Yud-ZNx-33" value="Browser DOM APIs&amp;nbsp;&lt;span style=&quot;font-weight: normal;&quot;&gt;(Low Level)&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=3" vertex="1" parent="1">
+          <mxGeometry x="1047" y="320.5" width="144" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TngaxpVupLJ24Yud-ZNx-34" value="Browser DOM APIs&amp;nbsp;&lt;span style=&quot;font-weight: normal;&quot;&gt;(Low Level)&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=3" vertex="1" parent="1">
+          <mxGeometry x="1054" y="406" width="146" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TngaxpVupLJ24Yud-ZNx-36" value="Ask to open the session" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="263" y="233" as="geometry">
+            <mxPoint x="-16" y="39" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="&lt;h4 data-start=&quot;400&quot; data-end=&quot;498&quot; class=&quot;&quot;&gt;&lt;strong data-start=&quot;408&quot; data-end=&quot;473&quot;&gt;You write and run test code using the Selenium client library&lt;/strong&gt; (in Java, Python, etc.):&lt;/h4&gt;&#xa;&lt;pre class=&quot;overflow-visible!&quot; data-start=&quot;500&quot; data-end=&quot;551&quot;&gt;&lt;div class=&quot;contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary&quot;&gt;&lt;div class=&quot;flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]&quot;&gt;java&lt;/div&gt;&lt;div class=&quot;sticky top-9&quot;&gt;&lt;div class=&quot;absolute end-0 bottom-0 flex h-9 items-center pe-2&quot;&gt;&lt;div class=&quot;bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs&quot;&gt;&lt;span class=&quot;&quot; data-state=&quot;closed&quot;&gt;&lt;button class=&quot;flex gap-1 items-center select-none px-4 py-1&quot; aria-label=&quot;Copy&quot;&gt;&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;icon-xs&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M7 5C7 3.34315 8.34315 2 10 2H19C20.6569 2 22 3.34315 22 5V14C22 15.6569 20.6569 17 19 17H17V19C17 20.6569 15.6569 22 14 22H5C3.34315 22 2 20.6569 2 19V10C2 8.34315 3.34315 7 5 7H7V5ZM9 7H14C15.6569 7 17 8.34315 17 10V15H19C19.5523 15 20 14.5523 20 14V5C20 4.44772 19.5523 4 19 4H10C9.44772 4 9 4.44772 9 5V7ZM5 9C4.44772 9 4 9.44772 4 10V19C4 19.5523 4.44772 20 5 20H14C14.5523 20 15 19.5523 15 19V10C15 9.44772 14.5523 9 14 9H5Z&quot; fill=&quot;currentColor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;Copy&lt;/button&gt;&lt;/span&gt;&lt;span class=&quot;&quot; data-state=&quot;closed&quot;&gt;&lt;button class=&quot;flex items-center gap-1 px-4 py-1 select-none&quot;&gt;&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;icon-xs&quot;&gt;&lt;path d=&quot;M2.5 5.5C4.3 5.2 5.2 4 5.5 2.5C5.8 4 6.7 5.2 8.5 5.5C6.7 5.8 5.8 7 5.5 8.5C5.2 7 4.3 5.8 2.5 5.5Z&quot; fill=&quot;currentColor&quot; stroke=&quot;currentColor&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M5.66282 16.5231L5.18413 19.3952C5.12203 19.7678 5.09098 19.9541 5.14876 20.0888C5.19933 20.2067 5.29328 20.3007 5.41118 20.3512C5.54589 20.409 5.73218 20.378 6.10476 20.3159L8.97693 19.8372C9.72813 19.712 10.1037 19.6494 10.4542 19.521C10.7652 19.407 11.0608 19.2549 11.3343 19.068C11.6425 18.8575 11.9118 18.5882 12.4503 18.0497L20 10.5C21.3807 9.11929 21.3807 6.88071 20 5.5C18.6193 4.11929 16.3807 4.11929 15 5.5L7.45026 13.0497C6.91175 13.5882 6.6425 13.8575 6.43197 14.1657C6.24513 14.4392 6.09299 14.7348 5.97903 15.0458C5.85062 15.3963 5.78802 15.7719 5.66282 16.5231Z&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M14.5 7L18.5 11&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;/path&gt;&lt;/svg&gt;Edit&lt;/button&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;overflow-y-auto p-4&quot; dir=&quot;ltr&quot;&gt;&lt;code class=&quot;whitespace-pre! language-java&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span class=&quot;hljs-type&quot;&gt;WebDriver&lt;/span&gt;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&lt;span class=&quot;hljs-variable&quot;&gt;driver&lt;/span&gt;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&lt;span class=&quot;hljs-operator&quot;&gt;=&lt;/span&gt;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&lt;span class=&quot;hljs-title class_&quot;&gt;FirefoxDriver&lt;/span&gt;&lt;/span&gt;&lt;span&gt;();&#xa;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&#xa;&lt;h4 data-start=&quot;553&quot; data-end=&quot;630&quot; class=&quot;&quot;&gt;2. &lt;strong data-start=&quot;561&quot; data-end=&quot;630&quot;&gt;What happens under the hood when &lt;code data-start=&quot;596&quot; data-end=&quot;617&quot;&gt;new FirefoxDriver()&lt;/code&gt; is called?&lt;/strong&gt;&lt;/h4&gt;&#xa;&lt;ul data-start=&quot;631&quot; data-end=&quot;886&quot;&gt;&#xa;&lt;li data-start=&quot;631&quot; data-end=&quot;786&quot; class=&quot;&quot;&gt;&#xa;&lt;p data-start=&quot;633&quot; data-end=&quot;786&quot; class=&quot;&quot;&gt;The &lt;strong data-start=&quot;637&quot; data-end=&quot;669&quot;&gt;Selenium Java client library&lt;/strong&gt; sends an &lt;strong data-start=&quot;679&quot; data-end=&quot;700&quot;&gt;HTTP POST request&lt;/strong&gt; to the &lt;strong data-start=&quot;708&quot; data-end=&quot;723&quot;&gt;GeckoDriver&lt;/strong&gt; server (FirefoxDriver) with a command to &lt;strong data-start=&quot;765&quot; data-end=&quot;785&quot;&gt;create a session&lt;/strong&gt;.&lt;/p&gt;&#xa;&lt;/li&gt;&#xa;&lt;li data-start=&quot;787&quot; data-end=&quot;886&quot; class=&quot;&quot;&gt;&#xa;&lt;p data-start=&quot;789&quot; data-end=&quot;886&quot; class=&quot;&quot;&gt;This HTTP request includes &lt;strong data-start=&quot;816&quot; data-end=&quot;840&quot;&gt;desired capabilities&lt;/strong&gt; (like browser name, version, platform, etc.).&lt;/p&gt;&#xa;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;h4 data-start=&quot;888&quot; data-end=&quot;966&quot; class=&quot;&quot;&gt;3. &lt;strong data-start=&quot;896&quot; data-end=&quot;961&quot;&gt;GeckoDriver (or ChromeDriver, etc.) receives the HTTP request&lt;/strong&gt; and:&lt;/h4&gt;&#xa;&lt;ul data-start=&quot;967&quot; data-end=&quot;1145&quot;&gt;&#xa;&lt;li data-start=&quot;967&quot; data-end=&quot;1013&quot; class=&quot;&quot;&gt;&#xa;&lt;p data-start=&quot;969&quot; data-end=&quot;1013&quot; class=&quot;&quot;&gt;Launches the actual browser (e.g., Firefox).&lt;/p&gt;&#xa;&lt;/li&gt;&#xa;&lt;li data-start=&quot;1014&quot; data-end=&quot;1081&quot; class=&quot;&quot;&gt;&#xa;&lt;p data-start=&quot;1016&quot; data-end=&quot;1081&quot; class=&quot;&quot;&gt;Initializes a new &lt;strong data-start=&quot;1034&quot; data-end=&quot;1055&quot;&gt;WebDriver session&lt;/strong&gt; in that browser instance.&lt;/p&gt;&#xa;&lt;/li&gt;&#xa;&lt;li data-start=&quot;1082&quot; data-end=&quot;1145&quot; class=&quot;&quot;&gt;&#xa;&lt;p data-start=&quot;1084&quot; data-end=&quot;1145&quot; class=&quot;&quot;&gt;Returns a &lt;strong data-start=&quot;1094&quot; data-end=&quot;1108&quot;&gt;session ID&lt;/strong&gt; and session info back to the client.&lt;/p&gt;&#xa;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;h4 data-start=&quot;1147&quot; data-end=&quot;1317&quot; class=&quot;&quot;&gt;4. The &lt;strong data-start=&quot;1159&quot; data-end=&quot;1178&quot;&gt;Selenium client&lt;/strong&gt; stores the session ID and uses it for all future HTTP requests (like &lt;code data-start=&quot;1248&quot; data-end=&quot;1258&quot;&gt;navigate&lt;/code&gt;, &lt;code data-start=&quot;1260&quot; data-end=&quot;1267&quot;&gt;click&lt;/code&gt;, etc.) to control that specific browser instance.&lt;/h4&gt;" link="&lt;h4 data-start=&quot;400&quot; data-end=&quot;498&quot; class=&quot;&quot;&gt;&lt;strong data-start=&quot;408&quot; data-end=&quot;473&quot;&gt;You write and run test code using the Selenium client library&lt;/strong&gt; (in Java, Python, etc.):&lt;/h4&gt;&#xa;&lt;pre class=&quot;overflow-visible!&quot; data-start=&quot;500&quot; data-end=&quot;551&quot;&gt;&lt;div class=&quot;contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary&quot;&gt;&lt;div class=&quot;flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]&quot;&gt;java&lt;/div&gt;&lt;div class=&quot;sticky top-9&quot;&gt;&lt;div class=&quot;absolute end-0 bottom-0 flex h-9 items-center pe-2&quot;&gt;&lt;div class=&quot;bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs&quot;&gt;&lt;span class=&quot;&quot; data-state=&quot;closed&quot;&gt;&lt;button class=&quot;flex gap-1 items-center select-none px-4 py-1&quot; aria-label=&quot;Copy&quot;&gt;&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;icon-xs&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; clip-rule=&quot;evenodd&quot; d=&quot;M7 5C7 3.34315 8.34315 2 10 2H19C20.6569 2 22 3.34315 22 5V14C22 15.6569 20.6569 17 19 17H17V19C17 20.6569 15.6569 22 14 22H5C3.34315 22 2 20.6569 2 19V10C2 8.34315 3.34315 7 5 7H7V5ZM9 7H14C15.6569 7 17 8.34315 17 10V15H19C19.5523 15 20 14.5523 20 14V5C20 4.44772 19.5523 4 19 4H10C9.44772 4 9 4.44772 9 5V7ZM5 9C4.44772 9 4 9.44772 4 10V19C4 19.5523 4.44772 20 5 20H14C14.5523 20 15 19.5523 15 19V10C15 9.44772 14.5523 9 14 9H5Z&quot; fill=&quot;currentColor&quot;&gt;&lt;/path&gt;&lt;/svg&gt;Copy&lt;/button&gt;&lt;/span&gt;&lt;span class=&quot;&quot; data-state=&quot;closed&quot;&gt;&lt;button class=&quot;flex items-center gap-1 px-4 py-1 select-none&quot;&gt;&lt;svg width=&quot;24&quot; height=&quot;24&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;icon-xs&quot;&gt;&lt;path d=&quot;M2.5 5.5C4.3 5.2 5.2 4 5.5 2.5C5.8 4 6.7 5.2 8.5 5.5C6.7 5.8 5.8 7 5.5 8.5C5.2 7 4.3 5.8 2.5 5.5Z&quot; fill=&quot;currentColor&quot; stroke=&quot;currentColor&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M5.66282 16.5231L5.18413 19.3952C5.12203 19.7678 5.09098 19.9541 5.14876 20.0888C5.19933 20.2067 5.29328 20.3007 5.41118 20.3512C5.54589 20.409 5.73218 20.378 6.10476 20.3159L8.97693 19.8372C9.72813 19.712 10.1037 19.6494 10.4542 19.521C10.7652 19.407 11.0608 19.2549 11.3343 19.068C11.6425 18.8575 11.9118 18.5882 12.4503 18.0497L20 10.5C21.3807 9.11929 21.3807 6.88071 20 5.5C18.6193 4.11929 16.3807 4.11929 15 5.5L7.45026 13.0497C6.91175 13.5882 6.6425 13.8575 6.43197 14.1657C6.24513 14.4392 6.09299 14.7348 5.97903 15.0458C5.85062 15.3963 5.78802 15.7719 5.66282 16.5231Z&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M14.5 7L18.5 11&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;/path&gt;&lt;/svg&gt;Edit&lt;/button&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;overflow-y-auto p-4&quot; dir=&quot;ltr&quot;&gt;&lt;code class=&quot;whitespace-pre! language-java&quot;&gt;&lt;span&gt;&lt;span&gt;&lt;span class=&quot;hljs-type&quot;&gt;WebDriver&lt;/span&gt;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&lt;span class=&quot;hljs-variable&quot;&gt;driver&lt;/span&gt;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&lt;span class=&quot;hljs-operator&quot;&gt;=&lt;/span&gt;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;new&lt;/span&gt;&lt;/span&gt;&lt;span&gt; &lt;/span&gt;&lt;span&gt;&lt;span class=&quot;hljs-title class_&quot;&gt;FirefoxDriver&lt;/span&gt;&lt;/span&gt;&lt;span&gt;();&#xa;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/div&gt;&lt;/div&gt;&lt;/pre&gt;&#xa;&lt;h4 data-start=&quot;553&quot; data-end=&quot;630&quot; class=&quot;&quot;&gt;2. &lt;strong data-start=&quot;561&quot; data-end=&quot;630&quot;&gt;What happens under the hood when &lt;code data-start=&quot;596&quot; data-end=&quot;617&quot;&gt;new FirefoxDriver()&lt;/code&gt; is called?&lt;/strong&gt;&lt;/h4&gt;&#xa;&lt;ul data-start=&quot;631&quot; data-end=&quot;886&quot;&gt;&#xa;&lt;li data-start=&quot;631&quot; data-end=&quot;786&quot; class=&quot;&quot;&gt;&#xa;&lt;p data-start=&quot;633&quot; data-end=&quot;786&quot; class=&quot;&quot;&gt;The &lt;strong data-start=&quot;637&quot; data-end=&quot;669&quot;&gt;Selenium Java client library&lt;/strong&gt; sends an &lt;strong data-start=&quot;679&quot; data-end=&quot;700&quot;&gt;HTTP POST request&lt;/strong&gt; to the &lt;strong data-start=&quot;708&quot; data-end=&quot;723&quot;&gt;GeckoDriver&lt;/strong&gt; server (FirefoxDriver) with a command to &lt;strong data-start=&quot;765&quot; data-end=&quot;785&quot;&gt;create a session&lt;/strong&gt;.&lt;/p&gt;&#xa;&lt;/li&gt;&#xa;&lt;li data-start=&quot;787&quot; data-end=&quot;886&quot; class=&quot;&quot;&gt;&#xa;&lt;p data-start=&quot;789&quot; data-end=&quot;886&quot; class=&quot;&quot;&gt;This HTTP request includes &lt;strong data-start=&quot;816&quot; data-end=&quot;840&quot;&gt;desired capabilities&lt;/strong&gt; (like browser name, version, platform, etc.).&lt;/p&gt;&#xa;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;h4 data-start=&quot;888&quot; data-end=&quot;966&quot; class=&quot;&quot;&gt;3. &lt;strong data-start=&quot;896&quot; data-end=&quot;961&quot;&gt;GeckoDriver (or ChromeDriver, etc.) receives the HTTP request&lt;/strong&gt; and:&lt;/h4&gt;&#xa;&lt;ul data-start=&quot;967&quot; data-end=&quot;1145&quot;&gt;&#xa;&lt;li data-start=&quot;967&quot; data-end=&quot;1013&quot; class=&quot;&quot;&gt;&#xa;&lt;p data-start=&quot;969&quot; data-end=&quot;1013&quot; class=&quot;&quot;&gt;Launches the actual browser (e.g., Firefox).&lt;/p&gt;&#xa;&lt;/li&gt;&#xa;&lt;li data-start=&quot;1014&quot; data-end=&quot;1081&quot; class=&quot;&quot;&gt;&#xa;&lt;p data-start=&quot;1016&quot; data-end=&quot;1081&quot; class=&quot;&quot;&gt;Initializes a new &lt;strong data-start=&quot;1034&quot; data-end=&quot;1055&quot;&gt;WebDriver session&lt;/strong&gt; in that browser instance.&lt;/p&gt;&#xa;&lt;/li&gt;&#xa;&lt;li data-start=&quot;1082&quot; data-end=&quot;1145&quot; class=&quot;&quot;&gt;&#xa;&lt;p data-start=&quot;1084&quot; data-end=&quot;1145&quot; class=&quot;&quot;&gt;Returns a &lt;strong data-start=&quot;1094&quot; data-end=&quot;1108&quot;&gt;session ID&lt;/strong&gt; and session info back to the client.&lt;/p&gt;&#xa;&lt;/li&gt;&#xa;&lt;/ul&gt;&#xa;&lt;h4 data-start=&quot;1147&quot; data-end=&quot;1317&quot; class=&quot;&quot;&gt;4. The &lt;strong data-start=&quot;1159&quot; data-end=&quot;1178&quot;&gt;Selenium client&lt;/strong&gt; stores the session ID and uses it for all future HTTP requests (like &lt;code data-start=&quot;1248&quot; data-end=&quot;1258&quot;&gt;navigate&lt;/code&gt;, &lt;code data-start=&quot;1260&quot; data-end=&quot;1267&quot;&gt;click&lt;/code&gt;, etc.) to control that specific browser instance.&lt;/h4&gt;" id="TngaxpVupLJ24Yud-ZNx-37">
+          <mxCell style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+            <mxGeometry x="339.66668701171875" y="643" width="550" height="907" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="P5-P-G1MqibAopg0s8ao" name="Tech Stack">
+    <mxGraphModel dx="1011" dy="501" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="-EAKlHdqJ9oSLXXh2_2c" name="Distributed Testing">
+    <mxGraphModel dx="1011" dy="501" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

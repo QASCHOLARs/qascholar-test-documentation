@@ -1,0 +1,248 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram id="WBweFGNQKUQeWtfyckFX" name="Architecture">
+    <mxGraphModel dx="1841" dy="467" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="GkXE19n-aq0wxK2fDRrD-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;flowAnimation=1;" parent="1" source="2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="335" y="182" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="264" y="236" />
+              <mxPoint x="264" y="182" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2" value="PlayWright Client Library/Language Bindings" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="59" y="222" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GkXE19n-aq0wxK2fDRrD-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;flowAnimation=1;" parent="1" source="GkXE19n-aq0wxK2fDRrD-3" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="107" y="218" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GkXE19n-aq0wxK2fDRrD-3" value="PlayWright API" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="162" y="103" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GkXE19n-aq0wxK2fDRrD-4" value="&lt;ul&gt;&lt;li&gt;Java&lt;/li&gt;&lt;li&gt;Python&lt;/li&gt;&lt;li&gt;Java Script/TypeScript&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;C#&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" parent="1" vertex="1">
+          <mxGeometry x="28" y="271" width="174" height="127" as="geometry" />
+        </mxCell>
+        <mxCell id="GkXE19n-aq0wxK2fDRrD-19" value="PlayWright Script&lt;br&gt;(&lt;b&gt;JavaScript/TypeScript&lt;/b&gt;)" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.document;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="344" y="141.5" width="142" height="65.5" as="geometry" />
+        </mxCell>
+        <mxCell id="zaAtNCAkJqnbsfX8qOx8-2" value="web application" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#fad7ac;strokeColor=#b46504;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="1322" y="270.5" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;flowAnimation=1;entryX=0;entryY=0.372;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="J-aP12uEcNvLmfoxGy7O-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="338" y="454" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="263" y="281" />
+              <mxPoint x="263" y="422" />
+            </Array>
+            <mxPoint x="179" y="281" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;flowAnimation=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="341" y="356.5" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="316" y="267.5" />
+              <mxPoint x="316" y="356.5" />
+            </Array>
+            <mxPoint x="179" y="267" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;flowAnimation=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="342" y="252.5" as="targetPoint" />
+            <mxPoint x="179" y="251.5" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="179" y="252.5" />
+              <mxPoint x="334" y="252.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-10" value="PlayWright Script&lt;br&gt;(&lt;b&gt;.Net/C#&lt;/b&gt;)" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.document;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="344" y="398" width="142" height="65.5" as="geometry" />
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-11" value="PlayWright Script&lt;br&gt;(&lt;b&gt;Java&lt;/b&gt;)" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.document;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="345" y="223.25" width="142" height="65.5" as="geometry" />
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-12" value="PlayWright Script&lt;br&gt;(&lt;b&gt;Python&lt;/b&gt;)" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.document;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="344" y="311.5" width="142" height="65.5" as="geometry" />
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-14" value="&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;b&gt;PlayWright Core&lt;br&gt;&lt;/b&gt;(NodeJs Library/Process)" style="shape=module;align=left;spacingLeft=20;align=center;verticalAlign=top;whiteSpace=wrap;html=1;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="704" y="267" width="164" height="77" as="geometry" />
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-15" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#9999FF;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.json_script;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="574" y="217" width="57" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-17" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="505" y="166" width="20" height="276" as="geometry" />
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-20" value="" style="endArrow=classic;html=1;rounded=0;flowAnimation=1;strokeWidth=1;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="635" y="257" as="sourcePoint" />
+            <mxPoint x="702" y="303.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-23" value="" style="endArrow=classic;html=1;rounded=0;flowAnimation=1;strokeWidth=1;dashed=1;entryX=-0.073;entryY=0.487;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="J-aP12uEcNvLmfoxGy7O-15">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="525" y="304" as="sourcePoint" />
+            <mxPoint x="566" y="303.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-24" value="&lt;b&gt;&lt;u&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Chrome Browser&lt;/font&gt;&lt;/u&gt;&lt;/b&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;(Chrome DevTools Server)&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1023" y="268" width="188" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-54" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;flowAnimation=1;" edge="1" parent="1" source="J-aP12uEcNvLmfoxGy7O-58" target="zaAtNCAkJqnbsfX8qOx8-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1240" y="310.5" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-30" value="" style="endArrow=classic;html=1;rounded=0;flowAnimation=1;dashed=1;" edge="1" parent="1" source="J-aP12uEcNvLmfoxGy7O-36">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1021" y="331" as="sourcePoint" />
+            <mxPoint x="868" y="331" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-32" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;Web Socket&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="892" y="237" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-34" value="" style="endArrow=classic;html=1;rounded=0;flowAnimation=1;dashed=1;" edge="1" parent="1" source="J-aP12uEcNvLmfoxGy7O-35">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="861" y="287.75" as="sourcePoint" />
+            <mxPoint x="1021" y="287.75" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-37" value="" style="endArrow=classic;html=1;rounded=0;flowAnimation=1;dashed=1;" edge="1" parent="1" target="J-aP12uEcNvLmfoxGy7O-36">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1021" y="331" as="sourcePoint" />
+            <mxPoint x="868" y="331" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-36" value="&lt;b&gt;response&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#6F0000;fillColor=#a20025;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="907.5" y="321.5" width="71" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-39" value="" style="endArrow=classic;html=1;rounded=0;flowAnimation=1;dashed=1;" edge="1" parent="1" target="J-aP12uEcNvLmfoxGy7O-35">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="871" y="288" as="sourcePoint" />
+            <mxPoint x="1021" y="287.75" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-35" value="&lt;b&gt;request&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#6F0000;fillColor=#a20025;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="912.5" y="271" width="61" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-40" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#9999FF;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.json_script;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="575" y="305.25" width="57" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-41" value="&lt;b&gt;response&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#6F0000;fillColor=#a20025;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="569" y="402" width="71" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-42" value="&lt;b&gt;request&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#6F0000;fillColor=#a20025;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="572" y="181" width="61" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-44" value="" style="endArrow=classic;html=1;rounded=0;flowAnimation=1;strokeWidth=1;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="697" y="311.75" as="sourcePoint" />
+            <mxPoint x="632.863636363636" y="330.1242014742015" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-46" value="" style="endArrow=classic;html=1;rounded=0;flowAnimation=1;strokeWidth=1;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="575" y="332" as="sourcePoint" />
+            <mxPoint x="522" y="308" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-48" value="" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;fillColor=#FF6A00;strokeColor=none;shape=mxgraph.alibaba_cloud.user;" vertex="1" parent="1">
+          <mxGeometry x="7" y="166" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-50" value="&lt;b&gt;&lt;u&gt;Script Development&lt;/u&gt;&lt;/b&gt;" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="72" y="487" width="441" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-53" value="&lt;b&gt;&lt;u&gt;Script Execution&lt;/u&gt;&lt;/b&gt;" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="532.5" y="487" width="972.5" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-55" value="&lt;b&gt;&lt;u style=&quot;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Edge Browser&lt;/font&gt;&lt;/u&gt;&lt;/b&gt;&lt;div style=&quot;color: rgb(255, 255, 255);&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;(Chrome DevTools Server)&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" vertex="1" parent="1">
+          <mxGeometry x="1023" y="166" width="188" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-56" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;b&gt;Safari Browser&lt;/b&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;(WebKit Remote Debugging Protocol)&lt;/span&gt;)&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" vertex="1" parent="1">
+          <mxGeometry x="1023" y="365" width="188" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-57" value="&lt;b&gt;&lt;u&gt;Firerox Browser&lt;/u&gt;&lt;/b&gt;&lt;div&gt;(Marionette Protocol)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;" vertex="1" parent="1">
+          <mxGeometry x="1023" y="74" width="188" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-59" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;flowAnimation=1;" edge="1" parent="1" target="J-aP12uEcNvLmfoxGy7O-58">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1240" y="310.5" as="sourcePoint" />
+            <mxPoint x="1322" y="311" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-58" value="" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.chrome" vertex="1" parent="1">
+          <mxGeometry x="1196" y="272.8" width="74.8" height="75.4" as="geometry" />
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-61" value="&lt;b&gt;PlayWright Core is a nodejs library&lt;/b&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="692.5" y="353.25" width="215" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-62" value="&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 11px; color: rgb(103, 171, 159);&quot;&gt;&lt;b&gt;Reads json formatted commands&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;&lt;font style=&quot;font-size: 11px; color: rgb(103, 171, 159);&quot;&gt;&lt;b&gt;Translates them to browser native commands&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;&lt;font style=&quot;font-size: 11px; color: rgb(103, 171, 159);&quot;&gt;&lt;b&gt;Establish the websoket connection&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;&lt;font style=&quot;font-size: 11px; color: rgb(103, 171, 159);&quot;&gt;&lt;b&gt;Send requests and Receive responses&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;&lt;font style=&quot;font-size: 11px; color: rgb(103, 171, 159);&quot;&gt;&lt;b&gt;Sends response back to client libraries&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;strokeWidth=1;shadow=0;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="660" y="166" width="311" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-63" value="&lt;ul&gt;&lt;li&gt;&lt;b style=&quot;color: rgb(103, 171, 159); font-size: 11px; background-color: transparent;&quot;&gt;CDP recieve the commands from the PlayWright Core&lt;/b&gt;&lt;/li&gt;&lt;li&gt;&lt;b style=&quot;color: rgb(103, 171, 159); font-size: 11px; background-color: transparent;&quot;&gt;Interacts with the DOM elements via low level DOM APIs&lt;/b&gt;&lt;/li&gt;&lt;li&gt;&lt;b style=&quot;color: rgb(103, 171, 159); font-size: 11px; background-color: transparent;&quot;&gt;Respond to the PlayWright code with the responses.&amp;nbsp;&lt;/b&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;strokeWidth=1;shadow=0;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="1198.5" y="340" width="367" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-64" value="&lt;ul&gt;&lt;li&gt;&lt;b style=&quot;color: rgb(103, 171, 159); font-size: 11px; background-color: transparent;&quot;&gt;Design the test code in any client library&lt;/b&gt;&lt;/li&gt;&lt;li&gt;&lt;b style=&quot;color: rgb(103, 171, 159); font-size: 11px; background-color: transparent;&quot;&gt;Language Bindings are aligned with the PlayWright API&lt;/b&gt;&lt;/li&gt;&lt;li&gt;&lt;b style=&quot;color: rgb(103, 171, 159); font-size: 11px; background-color: transparent;&quot;&gt;Convert the test code into the common JSON format when script is executed&lt;/b&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;strokeWidth=1;shadow=0;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="288" y="59" width="481" height="92" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;li&gt;Open a browser (e.g., Chromium).&lt;/li&gt;&#xa;&lt;li&gt;Navigate to &lt;span&gt;https://mail.google.com&lt;/span&gt;.&lt;/li&gt;&#xa;&lt;li&gt;Enter an email address in the login field.&lt;/li&gt;&#xa;&lt;li&gt;Click the &quot;Next&quot; button to proceed.&lt;/li&gt;" link="&lt;li&gt;Open a browser (e.g., Chromium).&lt;/li&gt;&#xa;&lt;li&gt;Navigate to &lt;span&gt;https://mail.google.com&lt;/span&gt;.&lt;/li&gt;&#xa;&lt;li&gt;Enter an email address in the login field.&lt;/li&gt;&#xa;&lt;li&gt;Click the &quot;Next&quot; button to proceed.&lt;/li&gt;" id="J-aP12uEcNvLmfoxGy7O-65">
+          <mxCell style="text;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#fad9d5;strokeColor=#ae4132;" vertex="1" parent="1">
+            <mxGeometry x="-184" y="542" width="320" height="123" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;p dir=&quot;auto&quot; style=&quot;white-space: pre-wrap;&quot;&gt;const { chromium } = require(&#39;playwright&#39;);&lt;/p&gt;&#xa;&lt;p dir=&quot;auto&quot; style=&quot;white-space: pre-wrap;&quot;&gt;(async () =&amp;gt; {&#xa;  // Launch browser&#xa;  const browser = await chromium.launch({ headless: false });&#xa;  // Create a new page&#xa;  const page = await browser.newPage();&#xa;  // Navigate to Gmail&#xa;  await page.goto(&#39;https://mail.google.com&#39;);&#xa;  // Enter email&#xa;  await page.fill(&#39;input[type=&quot;email&quot;]&#39;, &#39;example@gmail.com&#39;);&#xa;  // Click Next button&#xa;  await page.click(&#39;button:has-text(&quot;Next&quot;)&#39;);&#xa;  // Close browser&#xa;  await browser.close();&#xa;})();&lt;/p&gt;" link="&lt;p dir=&quot;auto&quot; style=&quot;white-space: pre-wrap;&quot;&gt;const { chromium } = require(&#39;playwright&#39;);&lt;/p&gt;&#xa;&lt;p dir=&quot;auto&quot; style=&quot;white-space: pre-wrap;&quot;&gt;(async () =&amp;gt; {&#xa;  // Launch browser&#xa;  const browser = await chromium.launch({ headless: false });&#xa;  // Create a new page&#xa;  const page = await browser.newPage();&#xa;  // Navigate to Gmail&#xa;  await page.goto(&#39;https://mail.google.com&#39;);&#xa;  // Enter email&#xa;  await page.fill(&#39;input[type=&quot;email&quot;]&#39;, &#39;example@gmail.com&#39;);&#xa;  // Click Next button&#xa;  await page.click(&#39;button:has-text(&quot;Next&quot;)&#39;);&#xa;  // Close browser&#xa;  await browser.close();&#xa;})();&lt;/p&gt;" id="J-aP12uEcNvLmfoxGy7O-66">
+          <mxCell style="text;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="1">
+            <mxGeometry x="161.00333331346513" y="541.9966870117188" width="352" height="300" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;p dir=&quot;auto&quot; style=&quot;white-space: pre-wrap;&quot;&gt;{&#xa;  &quot;id&quot;: 1,&#xa;  &quot;guid&quot;: &quot;page@123&quot;,&#xa;  &quot;method&quot;: &quot;goto&quot;,&#xa;  &quot;params&quot;: {&#xa;    &quot;url&quot;: &quot;https://mail.google.com&quot;,&#xa;    &quot;timeout&quot;: 30000,&#xa;    &quot;waitUntil&quot;: &quot;load&quot;&#xa;  }&#xa;}&lt;/p&gt;" link="&lt;p dir=&quot;auto&quot; style=&quot;white-space: pre-wrap;&quot;&gt;{&#xa;  &quot;id&quot;: 1,&#xa;  &quot;guid&quot;: &quot;page@123&quot;,&#xa;  &quot;method&quot;: &quot;goto&quot;,&#xa;  &quot;params&quot;: {&#xa;    &quot;url&quot;: &quot;https://mail.google.com&quot;,&#xa;    &quot;timeout&quot;: 30000,&#xa;    &quot;waitUntil&quot;: &quot;load&quot;&#xa;  }&#xa;}&lt;/p&gt;" id="J-aP12uEcNvLmfoxGy7O-69">
+          <mxCell style="text;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="1">
+            <mxGeometry x="524.9965852665902" y="545.9966870117188" width="205" height="190" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;p dir=&quot;auto&quot; style=&quot;white-space: pre-wrap;&quot;&gt;{&#xa;  &quot;method&quot;: &quot;Page.navigate&quot;,&#xa;  &quot;params&quot;: {&#xa;    &quot;url&quot;: &quot;https://mail.google.com&quot;,&#xa;    &quot;frameId&quot;: &quot;main&quot;&#xa;  }&#xa;}&lt;/p&gt;" link="&lt;p dir=&quot;auto&quot; style=&quot;white-space: pre-wrap;&quot;&gt;{&#xa;  &quot;method&quot;: &quot;Page.navigate&quot;,&#xa;  &quot;params&quot;: {&#xa;    &quot;url&quot;: &quot;https://mail.google.com&quot;,&#xa;    &quot;frameId&quot;: &quot;main&quot;&#xa;  }&#xa;}&lt;/p&gt;" id="J-aP12uEcNvLmfoxGy7O-70">
+          <mxCell style="text;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" vertex="1" parent="1">
+            <mxGeometry x="768.5" y="546" width="205" height="192" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;div dir=&quot;auto&quot;&gt;&lt;div&gt;&lt;div style=&quot;display: block; overflow-x: auto; padding: 16px; color: var(--fg-primary); background: var(--surface-l1); border-radius: 0px 0px 12px 12px; border-top: none; border-right-color: ; border-right-style: ; border-right-width: ; border-bottom-color: ; border-bottom-style: ; border-bottom-width: ; border-left-color: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; margin-top: 0px; font-size: 0.9em; font-family: var(--font-ibm-plex-mono); line-height: 1.5em;&quot;&gt;&lt;code style=&quot;white-space: pre; line-height: inherit; font-size: inherit;&quot;&gt;&lt;span&gt;{&lt;br&gt;&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;color: rgb(152, 104, 1);&quot;&gt;&quot;method&quot;&lt;/span&gt;&lt;span&gt;: &lt;/span&gt;&lt;span style=&quot;color: rgb(80, 161, 79);&quot;&gt;&quot;Page.navigatedWithinDocument&quot;&lt;/span&gt;&lt;span&gt;,&lt;br&gt;&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;color: rgb(152, 104, 1);&quot;&gt;&quot;params&quot;&lt;/span&gt;&lt;span&gt;: { &lt;/span&gt;&lt;span style=&quot;color: rgb(152, 104, 1);&quot;&gt;&quot;frameId&quot;&lt;/span&gt;&lt;span&gt;: &lt;/span&gt;&lt;span style=&quot;color: rgb(80, 161, 79);&quot;&gt;&quot;main&quot;&lt;/span&gt;&lt;span&gt;, &lt;/span&gt;&lt;span style=&quot;color: rgb(152, 104, 1);&quot;&gt;&quot;url&quot;&lt;/span&gt;&lt;span&gt;: &lt;/span&gt;&lt;span style=&quot;color: rgb(80, 161, 79);&quot;&gt;&quot;https://mail.google.com&quot;&lt;/span&gt;&lt;span&gt; }&lt;br&gt;&lt;/span&gt;}&lt;/code&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;br&gt;&lt;div dir=&quot;auto&quot;&gt;&lt;br&gt;&lt;/div&gt;" link="&lt;div dir=&quot;auto&quot;&gt;&lt;div&gt;&lt;div style=&quot;display: block; overflow-x: auto; padding: 16px; color: var(--fg-primary); background: var(--surface-l1); border-radius: 0px 0px 12px 12px; border-top: none; border-right-color: ; border-right-style: ; border-right-width: ; border-bottom-color: ; border-bottom-style: ; border-bottom-width: ; border-left-color: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; margin-top: 0px; font-size: 0.9em; font-family: var(--font-ibm-plex-mono); line-height: 1.5em;&quot;&gt;&lt;code style=&quot;white-space: pre; line-height: inherit; font-size: inherit;&quot;&gt;&lt;span&gt;{&#xa;&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;color: rgb(152, 104, 1);&quot;&gt;&quot;method&quot;&lt;/span&gt;&lt;span&gt;: &lt;/span&gt;&lt;span style=&quot;color: rgb(80, 161, 79);&quot;&gt;&quot;Page.navigatedWithinDocument&quot;&lt;/span&gt;&lt;span&gt;,&#xa;&lt;/span&gt;&lt;span&gt;  &lt;/span&gt;&lt;span style=&quot;color: rgb(152, 104, 1);&quot;&gt;&quot;params&quot;&lt;/span&gt;&lt;span&gt;: { &lt;/span&gt;&lt;span style=&quot;color: rgb(152, 104, 1);&quot;&gt;&quot;frameId&quot;&lt;/span&gt;&lt;span&gt;: &lt;/span&gt;&lt;span style=&quot;color: rgb(80, 161, 79);&quot;&gt;&quot;main&quot;&lt;/span&gt;&lt;span&gt;, &lt;/span&gt;&lt;span style=&quot;color: rgb(152, 104, 1);&quot;&gt;&quot;url&quot;&lt;/span&gt;&lt;span&gt;: &lt;/span&gt;&lt;span style=&quot;color: rgb(80, 161, 79);&quot;&gt;&quot;https://mail.google.com&quot;&lt;/span&gt;&lt;span&gt; }&#xa;&lt;/span&gt;}&lt;/code&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&#xa;&lt;div dir=&quot;auto&quot;&gt;&lt;div&gt;&lt;div&gt;&lt;span&gt;json&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" id="J-aP12uEcNvLmfoxGy7O-71">
+          <mxCell style="text;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;gradientColor=#97d077;" vertex="1" parent="1">
+            <mxGeometry x="1056.99658526659" y="557.0033129882812" width="458" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;p dir=&quot;auto&quot; style=&quot;white-space: pre-wrap;&quot;&gt;{&#xa;  &quot;id&quot;: 1,&#xa;  &quot;result&quot;: {&#xa;    &quot;navigationResult&quot;: { &quot;url&quot;: &quot;https://mail.google.com&quot; }&#xa;  }&#xa;}&lt;/p&gt;" link="&lt;p dir=&quot;auto&quot; style=&quot;white-space: pre-wrap;&quot;&gt;{&#xa;  &quot;id&quot;: 1,&#xa;  &quot;result&quot;: {&#xa;    &quot;navigationResult&quot;: { &quot;url&quot;: &quot;https://mail.google.com&quot; }&#xa;  }&#xa;}&lt;/p&gt;" id="J-aP12uEcNvLmfoxGy7O-72">
+          <mxCell style="text;whiteSpace=wrap;html=1;fillColor=#d5e8d4;gradientColor=#97d077;strokeColor=#82b366;" vertex="1" parent="1">
+            <mxGeometry x="592.4999592900276" y="787" width="320" height="132" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-73" value="1" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" vertex="1" parent="1">
+          <mxGeometry x="-37" y="672" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-74" value="2" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" vertex="1" parent="1">
+          <mxGeometry x="303" y="852" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-75" value="3" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" vertex="1" parent="1">
+          <mxGeometry x="595" y="738" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-76" value="4" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" vertex="1" parent="1">
+          <mxGeometry x="834" y="737" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-77" value="5" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" vertex="1" parent="1">
+          <mxGeometry x="1261" y="707" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="J-aP12uEcNvLmfoxGy7O-78" value="6" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" vertex="1" parent="1">
+          <mxGeometry x="724" y="922" width="50" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
