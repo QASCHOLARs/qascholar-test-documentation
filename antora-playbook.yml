@@ -1,6 +1,6 @@
 site:
   title: QASCHOLAR Docs
-  #url: https://qascholars.github.io/qascholar-test-documentation
+  url: https://qascholars.github.io/qascholar-test-documentation
 
 content:
   sources:
