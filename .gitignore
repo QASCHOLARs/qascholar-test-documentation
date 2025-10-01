@@ -1,0 +1,3 @@
+# The following modules will be ignored by git
+node_modules/
+/build/site
