@@ -4,14 +4,19 @@ site:
 
 content:
   sources:
-    - url: .
+    - url: ./docs/qascholar-docs
       branches: [ main ]
       start_path: docs
 
-ui:
+#ui:
   # use Antora default UI bundle; you can replace with your own UI bundle URL
+ # bundle:
+ #   url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/main/raw/build/ui-bundle.zip?job=build
+
+ui:
   bundle:
-    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/main/raw/build/ui-bundle.zip?job=build
+    url: https://github.com/stephengold/antora-ui-bundle/releases/download/v-sgold250101a/ui-bundle.zip
+    snapshot: true
 
 output:
   dir: ./build/site
