@@ -1,0 +1,17 @@
+site:
+  title: QASCHOLAR Docs
+  url: https://qascholars.github.io/qascholar-test-documentation
+
+content:
+  sources:
+    - url: .
+      branches: [ main ]
+      start_path: docs
+
+ui:
+  # use Antora default UI bundle; you can replace with your own UI bundle URL
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/main/raw/build/ui-bundle.zip?job=build
+
+output:
+  dir: ./build/site

@@ -1,0 +1,5 @@
+= QASCHOLAR Docs
+
+Welcome to the QASCHOLAR test documentation site.
+
+include::getting-started.adoc[]

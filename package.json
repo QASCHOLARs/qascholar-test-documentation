@@ -1,0 +1,24 @@
+{
+  "name": "qascholar-test-documentation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QASCHOLARs/qascholar-test-documentation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QASCHOLARs/qascholar-test-documentation/issues"
+  },
+  "homepage": "https://github.com/QASCHOLARs/qascholar-test-documentation#readme",
+  "devDependencies": {
+    "@antora/cli": "^3.1.13",
+    "@antora/site-generator": "^3.1.13"
+  }
+}
