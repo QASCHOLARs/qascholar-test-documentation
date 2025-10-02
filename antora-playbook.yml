@@ -13,15 +13,7 @@ content:
       branches: HEAD
       #start_path: modules/ROOT/nav.adoc
 
-#ui:
-  # use Antora default UI bundle; you can replace with your own UI bundle URL
- # bundle:
- #   url:  https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
 
-#ui:
- # bundle:
-  #  url: ./ui/ui-bundle.zip
-   # snapshot: true
 
 output:
   dir: ./build/site
