@@ -13,7 +13,10 @@ content:
       branches: HEAD
       #start_path: modules/ROOT/nav.adoc
 
-
+ui:
+  bundle:
+   -  url: ./ui/ui-bundle.zip
+    # snapshot: true
 
 output:
   dir: ./build/site
