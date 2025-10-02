@@ -15,8 +15,8 @@ content:
 
 ui:
   bundle:
-   -  url: ./ui/ui-bundle.zip
-    # snapshot: true
+    url: ./ui/ui-bundle.zip
+    snapshot: true
 
 output:
   dir: ./build/site
