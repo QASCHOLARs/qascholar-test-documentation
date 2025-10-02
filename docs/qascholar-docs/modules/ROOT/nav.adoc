@@ -1,2 +1,2 @@
-* xref:pages/index.adoc[Home]
-* xref:pages/getting-started.adoc[Getting started]
+* xref:index.adoc[Home]
+* xref:getting-started.adoc[Getting started]

@@ -4,14 +4,14 @@
 
 site:
   title: QASCHOLAR - Test Documentation
-  start_page: .docs/qascholar-docs::getting-started.adoc
+  start_page: qascholar-docs::getting-started.adoc
 
 
 content:
   sources:
     - url: ./docs/qascholar-docs
-      branches: [ main ]
-      start_path: modules/ROOT/
+      branches: HEAD
+      #start_path: modules/ROOT/nav.adoc
 
 #ui:
   # use Antora default UI bundle; you can replace with your own UI bundle URL
