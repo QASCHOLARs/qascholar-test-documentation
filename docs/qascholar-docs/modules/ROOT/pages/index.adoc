@@ -1,4 +1,4 @@
-= QASCHOLAR Docs
+= QASCHOLAR
 
 Welcome to the QASCHOLAR test documentation site.
 
