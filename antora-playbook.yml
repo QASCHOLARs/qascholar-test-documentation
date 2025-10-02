@@ -10,7 +10,7 @@ site:
 content:
   sources:
     - url: ./docs/qascholar-docs
-      branches: HEAD
+      branches: main
       #start_path: modules/ROOT/nav.adoc
 
 ui:
