@@ -9,7 +9,7 @@ site:
 
 content:
   sources:
-    - url: ./docs/qascholar-docs
+    - url: .
       branches: main
       #start_path: modules/ROOT/nav.adoc
 
