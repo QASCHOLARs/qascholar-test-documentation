@@ -11,7 +11,7 @@ content:
   sources:
     - url: .
       branches: main
-      #start_path: modules/ROOT/nav.adoc
+      start_path: docs/qascholar-docs
 
 ui:
   bundle:
