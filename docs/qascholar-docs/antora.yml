@@ -1,5 +1,5 @@
 name: qascholar-docs
-title: QASCHOLAR Test Documentation
+title: QASCHOLAR Test Library
 version: main
 nav:
   - modules/ROOT/nav.adoc
