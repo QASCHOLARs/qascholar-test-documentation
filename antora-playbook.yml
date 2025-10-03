@@ -3,7 +3,7 @@
 # url: https://qascholars.github.io/qascholar-test-documentation
 
 site:
-  title: QASCHOLAR ()
+  title: QASCHOLAR (Crafting Quality Minds)
   start_page: qascholar-docs::index.adoc
 
 
