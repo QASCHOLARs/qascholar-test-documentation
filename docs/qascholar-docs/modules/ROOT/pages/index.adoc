@@ -1,5 +1,17 @@
-= QASCHOLAR Docs
+= QASCHOLAR (Crafting Quality Minds for Future)
 
-Welcome to the QASCHOLAR test documentation site.
+== About Us:
 
-include::getting-started.adoc[]
+QASCHOLAR is a forward-thinking quality engineering company dedicated to empowering IT professionals and organizations to excel in software quality assurance. Founded with a vision to transform QA learning into impactful delivery, QASCHOLAR bridges the gap between theoretical knowledge and practical implementation.
+
+Our mission is twofold:
+
+To coach and mentor professionals in cutting-edge QA tools, automation frameworks, certification paths, and real-world testing practices.
+
+To deliver end-to-end testing services that align with business goals, enhance product reliability, and accelerate digital transformation.
+
+At QASCHOLAR, we combine hands-on training, personalized mentoring, and real project experience to build a new generation of quality engineers. As we grow, we are evolving into a center of excellence for quality engineering services, offering functional, automation, performance, security, and AI-driven testing solutions tailored to modern software needs
+
+include::PlayWright.adoc[]
+include::Jenkins.adoc[]
+
