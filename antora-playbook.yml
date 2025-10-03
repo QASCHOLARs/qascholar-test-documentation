@@ -3,8 +3,8 @@
 # url: https://qascholars.github.io/qascholar-test-documentation
 
 site:
-  title: QASCHOLAR - Test Documentation
-  start_page: qascholar-docs::getting-started.adoc
+  title: QASCHOLAR ()
+  start_page: qascholar-docs::index.adoc
 
 
 content:
