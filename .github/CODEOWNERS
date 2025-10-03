@@ -1,0 +1,14 @@
+# Global default owner
+* @qascholars/core-team
+
+# Automation tests
+# /automation/ @qascholars/automation-team
+
+# Performance testing
+# /performance/ @qascholars/performance-team
+
+# Security testing
+# /security/ @qascholars/security-team
+
+# Documentation
+# /docs/ @qascholars/docs-team
