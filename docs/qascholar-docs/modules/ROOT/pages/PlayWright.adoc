@@ -1,5 +1,10 @@
-== Getting started
 
-1. Clone repo.
-2. Edit AsciiDoc files under docs/qascholar-docs/modules/ROOT/pages/.
-3. Run Antora to rebuild site.
+include::browser-context-page.adoc[Browser Context and Page]
+include::timeout.adoc[Timeouts in Playwright]
+
+
+
+
+
+
+

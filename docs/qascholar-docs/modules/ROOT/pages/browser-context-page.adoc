@@ -1,0 +1,244 @@
+
+
+== Browser
+A Browser is an instance of web browser (like Chromium, Firefox, or WebKit) that Playwright can control. It provides the environment in which you can create browser contexts and pages to interact with web applications.
+
+In simple terms
+
+Think of Playwright like how you use a real browser (like Chrome):
+
+*** You open Chrome → that’s your Browser.
+*** You open a new profile (different user login, separate cookies) → that’s a Context.
+*** You open a new tab inside that profile → that’s a Page.
+
+```javascript
+const { chromium } = require('playwright');
+
+(async () => {
+  const browser = await chromium.launch();
+  ** const context = await browser.newContext(); **
+  const page = await context.newPage();
+  await page.goto('https://example.com');
+  await browser.close();
+})();
+```
+
+💡 Analogy:
+You double-click Chrome → Chrome app opens → that’s your browser.
+
+
+
+== Context
+A browser context in Playwright is an isolated environment within a browser instance. It allows you to create multiple independent sessions, each with its own cookies, local storage, and cache. This is particularly useful for testing scenarios where you need to simulate different users or sessions without interference.
+
+When you create a new browser context, it behaves like a fresh browser profile. You can open multiple pages (tabs) within the same context, and they will share the same session data. However, different contexts do not share any data, ensuring that tests remain isolated from one another.
+
+You can create a new browser context using the `browser.newContext()` method. This will give you a new context that you can use to launch pages.
+
+A browser context is like an isolated browser session inside the browser.
+
+Each context has its own:
+** Cookies
+** Local storage
+** Cache
+*** Authentication state
+Tests running in different contexts cannot see each other’s data.
+
+```javascript
+const { chromium } = require('playwright');
+
+(async () => {
+  const browser = await chromium.launch();
+  ** const context = await browser.newContext(); **
+  const page = await context.newPage();
+  await page.goto('https://example.com');
+  await browser.close();
+})();
+```
+
+💡 Analogy:
+You open Chrome with Incognito mode — that’s a new context.
+If you open another incognito window → that’s another context, totally separate.
+
+
+
+== Page
+A Page in Playwright represents a single tab or window within a browser context. It is the primary interface for interacting with web content, allowing you to navigate to URLs, interact with elements, and perform various actions on the web page.
+
+You can create a new page within a browser context using the `context.newPage()` method. This will give you a new page that you can use to navigate to a URL and interact with the web content.
+
+
+A page represents a single tab inside a context.
+
+This is where you perform test actions:
+
+** page.goto()
+** page.click()
+** page.fill()
+** page.screenshot()
+
+```javascript
+const { chromium } = require('playwright');
+
+(async () => {
+  const browser = await chromium.launch();
+  const context = await browser.newContext();
+  ** const page = await context.newPage(); **
+  await page.goto('https://example.com');
+  await browser.close();
+})();
+```
+
+💡 Analogy:
+Inside your Chrome Incognito window, each tab you open is a page.
+
+Visualization:
+
+* Browser (Chrome instance)
+ **  Context 1 (User A)
+   *** Page 1 (Tab 1)
+   ***  Page 2 (Tab 2)
+ **  Context 2 (User B)
+ *** Page 1 (Tab 1)
+  *** Page 2 (Tab 2)
+
+
+
+
+
+
+
+
+
+== Test Life Cycle
+Playwright tests typically follow a structured flow to ensure that each test is executed in a consistent manner. The general flow of a Playwright test includes the following steps:
+
+[sidebar]
+1. **Setup**: Initialize the Playwright environment, including launching a browser instance and creating a new page.
+2. **Navigation**: Navigate to the target web application or page that you want to test.
+3. **Interaction**: Perform actions on the web page, such as clicking buttons, filling out forms, and interacting with elements.
+4. **Assertions**: Verify that the expected outcomes are achieved, such as checking for the presence of specific elements or validating the content of the page.
+5. **Teardown**: Clean up the test environment by closing the browser instance and releasing any resources used during the test.
+
+Lets look at a simple example of a Playwright test that follows this flow:
+
+
+🧩 Scenario (1) with no hooks:
+
+****
+You have one test file (e.g. example.spec.js) like this:
+
+[source,js]
+----
+const { test } = require('@playwright/test');
+test('test 1', async ({ page }) => { /* ... */ });
+test('test 2', async ({ page }) => { /* ... */ });
+test('test 3', async ({ page }) => { /* ... */ });
+
+----
+
+⚙️ What happens under the hood
+1️⃣ browser fixture
+
+Created once per worker process (not per test).
+If your test run uses 1 worker, a single browser instance (like Chromium) will be launched and shared by all tests in that worker.
+
+2️⃣ context fixture
+
+Created fresh for each test.
+Each test gets its own browser context, which is like an isolated browser profile (new cookies, local storage, etc.).
+This ensures tests don’t interfere with each other.
+
+3️⃣ page fixture
+Created fresh for each test.
+Each test gets a new tab (page) inside its own context.
+
+****
+[cols="1,1,1,1,1", options="header"]
+|===
+| Fixture     | Created When     | Reused?   | Count during run |Life Time
+| **Browser**     | Once per worker   | ✅ Yes   | 1                | Till the end of all tests
+| **Context**     | Before each test   | ❌ No    | 3 (one per test) | Till end of each test
+| **Page**        | Before each test   | ❌ No    | 3 (one per test) | Till end of each test
+
+|===
+
+=== Lifecycle summary
+
+For each test:
+* Playwright reuses the existing browser.
+* Creates a new context (isolated browser session).
+* Creates a new page in that context.
+* Runs your test code.
+* Closes the page and context after the test ends.
+
+* Worker starts
+** Browser launched (1x)
+    *** Test 1 → new context, new page → run → close context,close page
+    *** Test 2 → new context, new page → run → close context,close page
+    *** Test 3 → new context, new page → run → close context,close page
+* Worker ends (tests done)
+** Browser closed 
+
+This lifecycle ensures that tests are isolated from each other while still being efficient by reusing the browser instance.
+
+🧩 Scenario (2) with beforeEach and afterEach hooks:
+
+****
+You have two test files (e.g. example1.spec.js and example2.spec.js) like this:
+[source,js]
+----
+test.beforeEach(async ({ page }) => {
+  console.log('Setup before each test');
+});
+
+test('test 1', async ({ page }) => { /* ... */ });
+test('test 2', async ({ page }) => { /* ... */ });
+test('test 3', async ({ page }) => { /* ... */ });
+
+test.afterEach(async ({ page }) => {
+  console.log('Cleanup after each test');
+});
+----
+****
+⚙️ What happens under the hood
+
+ ** browser fixture
+Create once per worker process (not per test).
+If your test run uses 1 worker, a single browser instance (like Chromium) will be launched and shared by all tests in that worker.
+
+** context fixture
+Create fresh for each test.
+Each test gets its own browser context, which is like an isolated browser profile (new cookies, local storage, etc.).
+This ensures tests don’t interfere with each other.
+
+** page fixture
+Create fresh for each test.
+Each test gets a new tab (page) inside its own context.
+
+** Run the before Each hook and use the context and page fixtures to perform any necessary cleanup actions.
+
+** Run the test code.
+
+** Run the after Each hook and use the context and page fixtures to perform any necessary cleanup actions.
+
+** Close the page and context after the test ends.
+
+=== Lifecycle summary
+For each test,Playwright
+
+** Creates a new context and new page.
+** Runs the beforeEach hook (setup code).
+** Runs your test.
+** Runs the afterEach hook (cleanup code).
+** Closes that context and page.
+
+** worker starts
+ *** Browser → creates once
+    **** Test 1 → new context, new page → beforeEach hook run → run → afterEach hook run → close context,close page
+    **** Test 2 → new context, new page → beforeEach hook run → run → afterEach hook run → close context,close page
+    **** Test 3 → new context, new page → beforeEach hook run → run → afterEach hook run → close context,close page
+** worker ends (tests done)
+  *** Browser closed
+
+This lifecycle ensures that tests are isolated from each other while still being efficient by reusing the browser instance. The beforeEach and afterEach hooks allow you to set up and clean up resources needed for each test.
