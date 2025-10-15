@@ -1,5 +1,6 @@
 
 include::includes/browser-context-page.adoc[Browser Context and Page]
+include::includes/workers.adoc[Workers]
 include::includes/timeout.adoc[Timeouts in Playwright]
 
 
