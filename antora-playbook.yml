@@ -10,7 +10,7 @@ site:
 content:
   sources:
     - url: .
-      branches: main
+      branches: bugfix/myfeature
       start_path: docs/qascholar-docs
 
 ui:
