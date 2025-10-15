@@ -1,0 +1,52 @@
+== Workers
+Playwright supports running tests using workers. Each worker runs in its own OS process, allowing for efficient test execution and isolation. You can configure the number of workers to optimize performance based on your system's capabilities.
+
+To configure the number of workers, you can use the `--workers` command-line option when running your tests. For example, to run tests with 4 workers, you can use the following command:
+```
+npx playwright test --workers=4
+```
+
+workers can also be configured in the Playwright configuration file (`playwright.config.js` or `playwright.config.ts`) by setting the `workers` property:
+
+```javascript
+module.exports = {
+  workers: 4,
+};
+```
+By default, Playwright automatically determines the number of workers based on the number of CPU cores available on your machine. However, you can override this setting to suit your specific needs.
+
+It's important to note that while using multiple workers can significantly speed up test execution, it may also lead to increased resource consumption. Therefore, it's advisable to monitor your system's performance and adjust the number of workers accordingly.
+
+if you want to disable parallel test execution and run tests sequentially, you can set the number of workers to 1:
+
+``` 
+npx playwright test --workers=1
+``
+or in the configuration file:
+
+```javascript
+module.exports = {
+  workers: 1,
+};
+```
+[sidebar]
+====   
+
+
+*Key Points about Playwright Workers*
+
+* Playwright's worker model allows for parallel test execution, improving efficiency and reducing overall test run time.
+* Each worker operates in its own OS process, ensuring test isolation and preventing interference between tests.    
+* Configuring the number of workers can help optimize performance based on your system's capabilities and resource availability.
+* Disabling parallel execution by setting workers to 1 can be useful for debugging or when tests require sequential execution.
+* Monitoring system performance is essential when using multiple workers to avoid resource contention and ensure smooth test execution.
+* Playwright automatically determines the optimal number of workers based on CPU cores, but this can be overridden in the configuration file or via command-line options.
+* Properly managing workers can lead to more reliable and efficient test suites, especially in larger projects with extensive test coverage.
+* Run this command to see how many logical CPU cores you have:
+  - `wmic cpu get NumberOfCores,NumberOfLogicalProcessors`
+  - `npx playwright test --workers=auto`
+  - This will use the number of logical CPU cores available on your machine.
+* For more detailed information, refer to the official Playwright documentation on [Test Configuration](https://playwright.dev/docs/test-configuration#workers).
+
+====
+
