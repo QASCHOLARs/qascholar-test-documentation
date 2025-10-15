@@ -101,7 +101,7 @@ Visualization:
   *** Page 2 (Tab 2)
 
 
-== PlayWright Test Life Cycle
+*PlayWright Test Flow and Fixture Life Cycle*
 Playwright tests typically follow a structured flow to ensure that each test is executed in a consistent manner. The general flow of a Playwright test includes the following steps:
 
 [sidebar]
