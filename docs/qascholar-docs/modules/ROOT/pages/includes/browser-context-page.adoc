@@ -153,7 +153,7 @@ Each test gets a new tab (page) inside its own context.
 
 Below is a summary of the lifecycle of the browser, context, and page fixtures during the test run.
 
-image::../assets/testrunner-with-no-hooks.png[Browser, Context, Page Lifecycle without Hooks]
+image::testrunner-with-no-hooks.png[Browser, Context, Page Lifecycle without Hooks]
 
 
 * Worker starts
@@ -228,7 +228,7 @@ Each test gets a new tab (page) inside its own context.
 Below is a summary of the lifecycle of the browser, context, and page fixtures during the test run.
 
 
-image::../assets/testrunner-with-beforeEach-afterEach-hooks.png[Browser, Context, Page Lifecycle without Hooks]
+image::testrunner-with-beforeEach-afterEach-hooks.png[Browser, Context, Page Lifecycle without Hooks]
 
 
 ** worker starts
@@ -291,7 +291,7 @@ Each test gets a new tab (page) inside its own context.
 Below is a summary of the lifecycle of the browser, context, and page fixtures during the test run.
 
 
-image::../assets/testrunner-with-beforeAll-afterAll-hooks.png[Browser, Context, Page Lifecycle without Hooks]
+image::testrunner-with-beforeAll-afterAll-hooks.png[Browser, Context, Page Lifecycle without Hooks]
 
 
 ** worker starts
