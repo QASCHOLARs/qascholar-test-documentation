@@ -1,5 +1,4 @@
 
-
 == Browser
 A Browser is an instance of web browser (like Chromium, Firefox, or WebKit) that Playwright can control. It provides the environment in which you can create browser contexts and pages to interact with web applications.
 
@@ -25,7 +24,6 @@ const { chromium } = require('playwright');
 
 💡 Analogy:
 You double-click Chrome → Chrome app opens → that’s your browser.
-
 
 
 == Context
@@ -116,7 +114,7 @@ Playwright tests typically follow a structured flow to ensure that each test is 
 Lets look at a simple example of a Playwright test that follows this flow:
 
 
-🧩 Scenario (1) - Test file with no hooks
+*🧩 Scenario (1) - Test file with no hooks*
 
 This means you have one test file with multiple tests and no beforeEach or afterEach hooks. Below is an example of what happens under the hood when you run such a test file.
 
@@ -151,11 +149,11 @@ Created fresh for each test.
 Each test gets a new tab (page) inside its own context.
 
 
-== Timeline of Browser, Context, Page Fixtures:
+*Timeline of Browser, Context, Page Fixtures:*
 
 Below is a summary of the lifecycle of the browser, context, and page fixtures during the test run.
 
-image::assets/testrunner-with-no-hooks.png[Browser, Context, Page Lifecycle]
+image::../assets/testrunner-with-no-hooks.png[Browser, Context, Page Lifecycle without Hooks]
 
 
 * Worker starts
@@ -166,7 +164,6 @@ image::assets/testrunner-with-no-hooks.png[Browser, Context, Page Lifecycle]
 * Worker ends (tests done)
 ** Browser closed 
 
-== Summary:
 
 Below is a summary table of the lifecycle of the browser, context, and page fixtures during the test run.
 
@@ -182,14 +179,14 @@ Below is a summary table of the lifecycle of the browser, context, and page fixt
 
 This lifecycle ensures that tests are isolated from each other while still being efficient by reusing the browser instance.
 
-== Key takeaway
+*Key takeaway*
 💡 Even if you don’t use hooks, Playwright automatically ensures:
 Each test = fresh browser context and page → No data leaks, no state carried over.
 
 
 
 
-🧩 Scenario (2) - Test file with beforeEach and afterEach hooks:
+*🧩 Scenario (2) - Test file with beforeEach and afterEach hooks:*
 
 This means you have one test file with multiple tests and with beforeEach/ afterEach hooks. Below is an example of what happens under the hood when you run such a test file.
 
@@ -226,12 +223,12 @@ This ensures tests don’t interfere with each other.
 Create fresh for each test.
 Each test gets a new tab (page) inside its own context.
 
-== Timeline of Browser, Context, Page Fixtures:
+*Timeline of Browser, Context, Page Fixtures:*
 
 Below is a summary of the lifecycle of the browser, context, and page fixtures during the test run.
 
 
-image::assets/testrunner-with-beforeEach-afterEach-hooks.png[Browser, Context, Page Lifecycle with Hooks]
+image::../assets/testrunner-with-beforeEach-afterEach-hooks.png[Browser, Context, Page Lifecycle without Hooks]
 
 
 ** worker starts
@@ -244,14 +241,14 @@ image::assets/testrunner-with-beforeEach-afterEach-hooks.png[Browser, Context, P
 
 This lifecycle ensures that tests are isolated from each other while still being efficient by reusing the browser instance. The beforeEach and afterEach hooks allow you to set up and clean up resources needed for each test.
 
-== Key takeaways:
+*Key takeaways:*
 ** Every test is isolated — it gets a fresh page and fresh browser context.
 ** Hooks (beforeEach and afterEach) run inside that same context.
 ** The browser is shared but context and page are not.
 ** Best choice when you want test isolation (recommended default).
 
 
-🧩 Scenario (3) - Test file with beforeAll and afterAll hooks:
+*🧩 Scenario (3) - Test file with beforeAll and afterAll hooks:*
 
 This means you have one test file with multiple tests and with beforeAll/ afterAll hooks. Below is an example of what happens under the hood when you run such a test file.
 
@@ -289,12 +286,12 @@ This ensures tests don’t interfere with each other.
 Create fresh for each test.
 Each test gets a new tab (page) inside its own context.
 
-== Timeline of Browser, Context, Page Fixtures:
+*Timeline of Browser, Context, Page Fixtures:*
 
 Below is a summary of the lifecycle of the browser, context, and page fixtures during the test run.
 
 
-image::assets/testrunner-with-beforeAll-afterAll-hooks.png[Browser, Context, Page Lifecycle with Hooks]
+image::../assets/testrunner-with-beforeAll-afterAll-hooks.png[Browser, Context, Page Lifecycle without Hooks]
 
 
 ** worker starts

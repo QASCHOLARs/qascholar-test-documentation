@@ -1,6 +1,6 @@
 
-include::browser-context-page.adoc[Browser Context and Page]
-include::timeout.adoc[Timeouts in Playwright]
+include::includes/browser-context-page.adoc[Browser Context and Page]
+include::includes/timeout.adoc[Timeouts in Playwright]
 
 
 

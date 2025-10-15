@@ -8,24 +8,33 @@ Timeouts are typically set in milliseconds (eg. 30000 ms for 30 seconds). The de
 
 Timeouts can be configured in playwright.config.js or directly in your test scripts. The settings can be adjusted based on the expected load times of your application and the complexity of the operations being performed. The setting can be set globally or per test basis. 
 
-
-
 Here are some common timeout settings you might want to configure:
 
-=== Page Timeout
+=== Global Timeout:
 
-You can set a timeout for the entire page to load by using the `page.setDefaultTimeout()` method. This timeout applies to all operations on the page, including navigation and element interactions.
+PlayWright Test supports a global timeout for the whole test run. There is no default value for this setting, so you need to set it explicitly in your configuration file.
 
 ```javascript
-const { chromium } = require('playwright');
+import { defineConfig } from '@playwright/test';
 
-(async () => {
-  const browser = await chromium.launch();
-  const page = await browser.newPage();
-  page.setDefaultTimeout(5000); // Set timeout to 5 seconds
+export default defineConfig({
+  globalTimeout: 3_600_000, // Set global timeout to 1 hour
+  //globalTimeout: 3600000, // Set default timeout for each action to 30 seconds
+});
+
+```
+
+=== Test Timeout:
+You can set a timeout for individual tests using the `test.setTimeout()` method. This is useful if you have specific tests that may take longer than the default timeout.
+
+```javascript
+import { test } from '@playwright/test';
+
+test('long-running test', async ({ page }) => {
+  test.setTimeout(120_000); // Set timeout to 2 minutes
   await page.goto('https://example.com');
-  await browser.close();
-})();
+  // Perform test actions
+});
 ```
 
 === Navigation Timeout

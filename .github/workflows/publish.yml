@@ -45,3 +45,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      
+      - name: Post deployment info
+        run: echo "Deployed to GitHub Pages: https://${{ steps.deployment.outputs.page_url }}"
+      
