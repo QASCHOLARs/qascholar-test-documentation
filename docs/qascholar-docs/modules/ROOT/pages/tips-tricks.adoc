@@ -1,0 +1,74 @@
+
+
+== how to find your CPU core count (physical and logical)
+
+Option 1: Using Task Manager (the easiest way)
+
+Press Ctrl + Shift + Esc → opens Task Manager
+
+Go to the Performance tab
+
+Click on CPU on the left
+
+Now look at the bottom right corner — you’ll see:
+
+Cores → physical cores
+
+Logical processors → logical cores
+
+📸 Example:
+
+Cores: 6  
+Logical processors: 12  
+
+
+That means:
+
+You have 6 physical cores
+
+Each core runs 2 threads → 12 logical cores
+
+⚙️ Option 2: Using Command Prompt
+
+Run this in CMD:
+
+wmic cpu get NumberOfCores,NumberOfLogicalProcessors
+
+
+Example output:
+
+NumberOfCores  NumberOfLogicalProcessors
+6              12
+
+🧮 Option 3: Using PowerShell
+
+Run this:
+
+Get-WmiObject -Class Win32_Processor | Select-Object NumberOfCores,NumberOfLogicalProcessors
+
+
+or the newer command:
+
+Get-CimInstance -ClassName Win32_Processor | Select-Object NumberOfCores,NumberOfLogicalProcessors
+
+💻 Option 4: Using Node.js (same as Playwright uses)
+
+If you have Node installed, run:
+
+node -p "os.cpus().length"
+
+
+✅ This gives the logical core count — the same number Playwright uses to decide how many workers to spawn.
+
+
+``` javascript
+// This script logs the number of CPU cores available on the machine.
+// It uses the 'os' module from Node.js to retrieve this information.
+// This can be useful for optimizing parallel test execution based on the number of CPU cores.
+const os = require('os');
+const logical = os.cpus().length;
+const physical = logical / 2; // approximate if HT is enabled
+
+console.log(`Logical cores: ${logical}`);
+console.log(`Approx physical cores: ${physical}`);
+```

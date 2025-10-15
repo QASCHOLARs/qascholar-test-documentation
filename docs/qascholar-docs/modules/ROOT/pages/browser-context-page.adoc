@@ -103,14 +103,7 @@ Visualization:
   *** Page 2 (Tab 2)
 
 
-
-
-
-
-
-
-
-== Test Life Cycle
+== PlayWright Test Life Cycle
 Playwright tests typically follow a structured flow to ensure that each test is executed in a consistent manner. The general flow of a Playwright test includes the following steps:
 
 [sidebar]
@@ -123,10 +116,12 @@ Playwright tests typically follow a structured flow to ensure that each test is 
 Lets look at a simple example of a Playwright test that follows this flow:
 
 
-🧩 Scenario (1) with no hooks:
+🧩 Scenario (1) - Test file with no hooks
+
+This means you have one test file with multiple tests and no beforeEach or afterEach hooks. Below is an example of what happens under the hood when you run such a test file.
 
 ****
-You have one test file (e.g. example.spec.js) like this:
+Given that you have one test file (e.g. example.spec.js) like this:
 
 [source,js]
 ----
@@ -137,40 +132,31 @@ test('test 3', async ({ page }) => { /* ... */ });
 
 ----
 
-⚙️ What happens under the hood
-1️⃣ browser fixture
+****
+*⚙️ What happens under the hood*
+
+* *Browser* fixture:
 
 Created once per worker process (not per test).
 If your test run uses 1 worker, a single browser instance (like Chromium) will be launched and shared by all tests in that worker.
 
-2️⃣ context fixture
+* *Context* fixture:
 
 Created fresh for each test.
 Each test gets its own browser context, which is like an isolated browser profile (new cookies, local storage, etc.).
 This ensures tests don’t interfere with each other.
 
-3️⃣ page fixture
+* *Page* fixture:
 Created fresh for each test.
 Each test gets a new tab (page) inside its own context.
 
-****
-[cols="1,1,1,1,1", options="header"]
-|===
-| Fixture     | Created When     | Reused?   | Count during run |Life Time
-| **Browser**     | Once per worker   | ✅ Yes   | 1                | Till the end of all tests
-| **Context**     | Before each test   | ❌ No    | 3 (one per test) | Till end of each test
-| **Page**        | Before each test   | ❌ No    | 3 (one per test) | Till end of each test
 
-|===
+== Timeline of Browser, Context, Page Fixtures:
 
-=== Lifecycle summary
+Below is a summary of the lifecycle of the browser, context, and page fixtures during the test run.
 
-For each test:
-* Playwright reuses the existing browser.
-* Creates a new context (isolated browser session).
-* Creates a new page in that context.
-* Runs your test code.
-* Closes the page and context after the test ends.
+image::assets/testrunner-with-no-hooks.png[Browser, Context, Page Lifecycle]
+
 
 * Worker starts
 ** Browser launched (1x)
@@ -180,9 +166,32 @@ For each test:
 * Worker ends (tests done)
 ** Browser closed 
 
+== Summary:
+
+Below is a summary table of the lifecycle of the browser, context, and page fixtures during the test run.
+
+****
+[cols="1,1,1,1,1", options="header"]
+|===
+| Fixture     | Created When     | Reused?   | Count during run |Life Time
+| **Browser**     | Once per worker   | ✅ Yes   | 1                | Till the end of all tests
+| **Context**     | Before each test   | ❌ No    | 3 (one per test) | Till end of each test
+| **Page**        | Before each test   | ❌ No    | 3 (one per test) | Till end of each test
+|===
+****
+
 This lifecycle ensures that tests are isolated from each other while still being efficient by reusing the browser instance.
 
-🧩 Scenario (2) with beforeEach and afterEach hooks:
+== Key takeaway
+💡 Even if you don’t use hooks, Playwright automatically ensures:
+Each test = fresh browser context and page → No data leaks, no state carried over.
+
+
+
+
+🧩 Scenario (2) - Test file with beforeEach and afterEach hooks:
+
+This means you have one test file with multiple tests and with beforeEach/ afterEach hooks. Below is an example of what happens under the hood when you run such a test file.
 
 ****
 You have two test files (e.g. example1.spec.js and example2.spec.js) like this:
@@ -201,37 +210,29 @@ test.afterEach(async ({ page }) => {
 });
 ----
 ****
-⚙️ What happens under the hood
 
- ** browser fixture
+*⚙️ What happens under the hood*
+
+*Browser* fixture:
 Create once per worker process (not per test).
 If your test run uses 1 worker, a single browser instance (like Chromium) will be launched and shared by all tests in that worker.
 
-** context fixture
+*Context* fixture:
 Create fresh for each test.
 Each test gets its own browser context, which is like an isolated browser profile (new cookies, local storage, etc.).
 This ensures tests don’t interfere with each other.
 
-** page fixture
+*Page* fixture:
 Create fresh for each test.
 Each test gets a new tab (page) inside its own context.
 
-** Run the before Each hook and use the context and page fixtures to perform any necessary cleanup actions.
+== Timeline of Browser, Context, Page Fixtures:
 
-** Run the test code.
+Below is a summary of the lifecycle of the browser, context, and page fixtures during the test run.
 
-** Run the after Each hook and use the context and page fixtures to perform any necessary cleanup actions.
 
-** Close the page and context after the test ends.
+image::assets/testrunner-with-beforeEach-afterEach-hooks.png[Browser, Context, Page Lifecycle with Hooks]
 
-=== Lifecycle summary
-For each test,Playwright
-
-** Creates a new context and new page.
-** Runs the beforeEach hook (setup code).
-** Runs your test.
-** Runs the afterEach hook (cleanup code).
-** Closes that context and page.
 
 ** worker starts
  *** Browser → creates once
@@ -242,3 +243,123 @@ For each test,Playwright
   *** Browser closed
 
 This lifecycle ensures that tests are isolated from each other while still being efficient by reusing the browser instance. The beforeEach and afterEach hooks allow you to set up and clean up resources needed for each test.
+
+== Key takeaways:
+** Every test is isolated — it gets a fresh page and fresh browser context.
+** Hooks (beforeEach and afterEach) run inside that same context.
+** The browser is shared but context and page are not.
+** Best choice when you want test isolation (recommended default).
+
+
+🧩 Scenario (3) - Test file with beforeAll and afterAll hooks:
+
+This means you have one test file with multiple tests and with beforeAll/ afterAll hooks. Below is an example of what happens under the hood when you run such a test file.
+
+
+****
+You have two test files (e.g. example1.spec.js and example2.spec.js) like this:
+[source,js]
+----
+test.beforeAll(async ({ page }) => {
+  console.log('Setup before all tests');
+});
+
+test('test 1', async ({ page }) => { /* ... */ });
+test('test 2', async ({ page }) => { /* ... */ });
+test('test 3', async ({ page }) => { /* ... */ });
+
+test.afterAll(async ({ page }) => {
+  console.log('Cleanup after all tests');
+});
+----
+****
+
+*⚙️ What happens under the hood*
+
+*Browser* fixture:
+Create once per worker process (not per test).
+If your test run uses 1 worker, a single browser instance (like Chromium) will be launched and shared by all tests in that worker.
+
+*Context* fixture:
+Create fresh for each test.
+Each test gets its own browser context, which is like an isolated browser profile (new cookies, local storage, etc.).
+This ensures tests don’t interfere with each other.
+
+*Page* fixture:
+Create fresh for each test.
+Each test gets a new tab (page) inside its own context.
+
+== Timeline of Browser, Context, Page Fixtures:
+
+Below is a summary of the lifecycle of the browser, context, and page fixtures during the test run.
+
+
+image::assets/testrunner-with-beforeAll-afterAll-hooks.png[Browser, Context, Page Lifecycle with Hooks]
+
+
+** worker starts
+ *** Browser → creates once
+  *** BeforeAll hook run
+    **** Test 1 → new context, new page → test body run → close context,close page
+    **** Test 2 → new context, new page → test bodyrun → close context,close page
+    **** Test 3 → new context, new page → test body run → close context,close page
+  *** afterAll hook run
+** worker ends (tests done)
+  *** Browser closed
+
+This lifecycle ensures that tests are isolated from each other while still being efficient by reusing the browser instance. The beforeAll and afterAll hooks allow you to set up and clean up resources needed for test runs.
+
+*beforeAll*,
+
+•	This runs only once, before any test starts.
+•	Important: The default Playwright fixtures (page, context) are not created yet, because they are per-test fixtures.
+•	So, beforeAll runs in a slightly “fixture-less” mode — it only gets access to static fixtures like { browser } if you ask for them.
+
+*afterAll*,
+•	Runs only once, after all tests in the file finish.
+•	Like beforeAll, it runs without per-test fixtures.
+•	Usually used to clean up external data, servers, or test setup.
+
+
+If you want to share one context or page across all tests, you must manually create them inside beforeAll using the browser fixture, like this:
+
+****
+[source,js]
+----
+let context;
+let page;
+
+test.beforeAll(async ({ browser }) => {
+  context = await browser.newContext();
+  page = await context.newPage();
+  console.log('Setup once before all tests');
+});
+
+test('test 1', async () => {
+  await page.goto('https://example.com');
+});
+
+test('test 2', async () => {
+  await page.click('text=Next');
+});
+
+test.afterAll(async () => {
+  console.log('Cleanup after all tests');
+  await context.close();
+});
+----
+****
+
+🧩 In this case:
+[Worker start]
+ └─ Browser launched
+     ├─ beforeAll (create context/page)
+     ├─ Test 1 (uses same page)
+     ├─ Test 2 (uses same page)
+     └─ afterAll (close context/page)
+[Worker end → Browser closed]
+
+✅ Shared page & context across tests
+⚠️ Not isolated — one test can affect another.
+
+
