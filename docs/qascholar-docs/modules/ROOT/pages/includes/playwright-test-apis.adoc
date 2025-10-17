@@ -1,0 +1,53 @@
+==PlayWright Test APIs
+
+PlayWright Test APIs are a set of functions and methods provided by the PlayWright testing framework alike JEST or Mocha. All the APIs in this test runner will facilitate to write end-to-end tests for web applications. The major features of PlayWright Test APIs include:
+
+1. **Browser Automation**: Control over browser actions like clicking, typing, and navigation.
+2. **Assertions**: Built-in assertion library for verifying expected outcomes.
+3. **Test Organization**: Support for organizing tests into suites and individual test cases.
+4. **Hooks**: Lifecycle hooks for setup and teardown operations.
+5. **Parallel Execution**: Ability to run tests in parallel for faster execution.
+6. **Cross-Browser Testing**: Support for multiple browsers like Chromium, Firefox, and WebKit.
+7. **Screenshots and Videos**: Capture screenshots and videos of test runs for debugging.
+8. **Network Interception**: Ability to intercept and modify network requests and responses.
+9. **Selectors**: Powerful selector engine to locate elements on the page.
+10. **Tracing**: Built-in tracing capabilities to analyze test performance and behavior.
+
+PlayWright Test APIs are designed to be user-friendly and flexible, making it easier for developers to create robust and reliable end-to-end tests for their web applications. 
+
+PlayWright Test API is developed on the top of Core PlayWright library, which is an open-source automation library for browser testing. It provides a high-level API to interact with web browsers and perform various actions like clicking, typing, navigating, and more.
+
+Besides the core PlayWright library, PlayWright Test API also includes additional features and utilities specifically designed for testing purposes. These features include test runners, assertion libraries, and reporting tools that help developers write and execute tests more efficiently.
+
+*Note*
+JEST and Mocha are also popular testing frameworks that can be used in conjunction with PlayWright Core library to write and run tests. They provide a structured way to organize tests, define test cases, and execute them in a controlled environment.
+
+The tests in the PlayWright can be decomposed into the following major components:
+. *Test Suites*: A collection of related test cases grouped together.
+. *Test Cases:* Individual tests that verify specific functionality or behavior.
+. *Test Steps:* Actions performed within a test case to interact with the application.
+. *Hooks:* Functions that run before or after test cases to set up or clean up the test environment.
+. *Assertions:* Statements that verify expected outcomes in the tests.
+
+PlayWright Test APIs provide a comprehensive set of functions and methods to facilitate the creation and execution of end-to-end tests for web applications. These APIs are designed to be user-friendly and flexible, allowing developers to write robust and reliable tests with ease.
+
+Here are some commonly used PlayWright Test APIs:
+[cols="1,1", options="header"]
+|===    
+|API |Description
+|`test()` |Defines a test case with a name and a function containing the test logic.|
+|`expect()` |Provides assertion methods to verify expected outcomes in tests.|
+|`beforeAll()` |Runs a function before all test cases in a suite.|
+|`afterAll()` |Runs a function after all test cases in a suite.|
+|`beforeEach()` |Runs a function before each test case in a suite.|
+|`afterEach()` |Runs a function after each test case in a suite.|
+|`page.goto(url)` |Navigates to a specified URL in the browser.|
+|`page.click(selector)` |Clicks on an element identified by the selector.|  
+|`page.fill(selector, value)` |Fills an input field identified by the selector with the specified value.|
+|`page.screenshot(options)` |Captures a screenshot of the current page.|
+|`page.waitForSelector(selector)` |Waits for an element matching the selector to appear on the page.|
+|`browser.newContext(options)` |Creates a new browser context with specified options.|
+|`browser.close()` |Closes the browser instance.|
+|===
+
+

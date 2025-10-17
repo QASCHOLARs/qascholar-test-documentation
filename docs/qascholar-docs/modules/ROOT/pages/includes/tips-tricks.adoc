@@ -1,65 +1,76 @@
+== Tips & Tricks
 
+The following are some useful tips and tricks that may enhance your experience with the test automation framework and activities
+
+** PlayWright Specific **
+The following are some tips and tricks specific to PlayWright.
+
+** 1) How to run tests repeatedly to discover flakiness on the tests? **
+
+You can use the `--repeat` option with the Playwright test command to run your tests multiple times. This is useful for identifying flaky tests that may pass or fail intermittently.
+
+Example command:
+```bash
+npx playwright test --repeat-each= 5 (it can be any number)
+```
+This command will run your tests 5 times in a row.
+
+for more information, refer to the official Playwright documentation on [Test Runner CLI Options](https://playwright.dev/docs/test-cli#--repeat-each).
+
+It is also recommended to use the `--workers=1` option to ensure that tests are run sequentially, which can help in isolating flaky tests.
+
+```bash
+npx playwright test --repeat-each=5 --workers=1
+```
+
+
+
+** Miscellaneous **
+
+The following are some miscellaneous tips and tricks.
+
+** 1) How to find your CPU core count (physical and logical) **
 
 == how to find your CPU core count (physical and logical)
 
-Option 1: Using Task Manager (the easiest way)
+*Option 1*: Using Task Manager (the easiest way)
 
 Press Ctrl + Shift + Esc → opens Task Manager
-
 Go to the Performance tab
-
 Click on CPU on the left
-
 Now look at the bottom right corner — you’ll see:
-
 Cores → physical cores
-
 Logical processors → logical cores
 
-📸 Example:
-
+Example:
 Cores: 6  
 Logical processors: 12  
 
 
 That means:
-
 You have 6 physical cores
-
 Each core runs 2 threads → 12 logical cores
 
-⚙️ Option 2: Using Command Prompt
+*Option 2*: Using Command Prompt
 
 Run this in CMD:
-
 wmic cpu get NumberOfCores,NumberOfLogicalProcessors
 
 
 Example output:
-
 NumberOfCores  NumberOfLogicalProcessors
 6              12
 
-🧮 Option 3: Using PowerShell
+*Option 3*: Using PowerShell
 
 Run this:
-
 Get-WmiObject -Class Win32_Processor | Select-Object NumberOfCores,NumberOfLogicalProcessors
 
-
 or the newer command:
-
 Get-CimInstance -ClassName Win32_Processor | Select-Object NumberOfCores,NumberOfLogicalProcessors
 
-💻 Option 4: Using Node.js (same as Playwright uses)
-
+*Option 4*: Using Node.js (same as Playwright uses)
 If you have Node installed, run:
-
-node -p "os.cpus().length"
-
-
-✅ This gives the logical core count — the same number Playwright uses to decide how many workers to spawn.
-
 
 ``` javascript
 // This script logs the number of CPU cores available on the machine.

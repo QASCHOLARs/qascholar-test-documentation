@@ -1,0 +1,27 @@
+For tutorials and guides, check out the Cypress Learning Center: https://learn.cypress.io/
+For community support and discussions, visit the Cypress Community Forum: https://www.cypress.io/community/
+For additional resources and examples, explore the Cypress GitHub repository: https://github.com/cypress-io/cypress
+For video tutorials and webinars, visit the Cypress YouTube channel: https://www.youtube.com/c/Cypressio
+For blog posts and articles, check out the Cypress Blog: https://www.cypress.io/blog/
+For plugins and extensions, explore the Cypress Plugins Directory: https://www.cypress.io/plugins/
+For integration with other tools and services, refer to the Cypress Integrations page: https://www.cypress.io/integrations/
+For troubleshooting and FAQs, visit the Cypress FAQ page: https://docs.cypress.io/guides/references/faq
+For updates and release notes, check out the Cypress Changelog: https://docs.cypress.io/guides/references/changelog
+For enterprise solutions and support, visit the Cypress Enterprise page: https://www.cypress.io/enterprise/
+For training and workshops, explore the Cypress Training page: https://www.cypress.io/training  
+For case studies and success stories, check out the Cypress Case Studies page: https://www.cypress.io/case-studies/
+For job opportunities and careers, visit the Cypress Careers page: https://www.cypress.io/careers/
+For social media updates and announcements, follow Cypress on Twitter: https://twitter.com/cypress_io
+For community contributions and open-source projects, explore the Cypress GitHub Discussions: https://github.com/cypress-io/cypress/discussions 
+For localization and translations, refer to the Cypress Localization page: https://www.cypress.io/localization/ 
+For accessibility testing and guidelines, check out the Cypress Accessibility page: https://www.cypress.io/accessibility/
+For security best practices and guidelines, visit the Cypress Security page: https://www.cypress.io/security/
+For performance optimization tips and techniques, refer to the Cypress Performance page: https://www.cypress.io/performance/
+For API documentation and reference, check out the Cypress API Reference: https://docs.cypress.io/api/api/table-of-contents
+For release notes and version history, visit the Cypress Release Notes page: https://docs.cypress.io/guides/references/changelog
+For community events and meetups, check out the Cypress Events page: https://www.cypress.io/events/
+For feedback and feature requests, visit the Cypress Feedback page: https://www.cypress.io/feedback/
+For sponsorship and partnership opportunities, refer to the Cypress Sponsorship page: https://www.cypress.io/sponsorship/
+For more resources and information, visit the Cypress Resources page: https://www.cypress.io/resources/
+For additional learning materials and courses, check out the Cypress Learning Resources page: https://www.c
+
