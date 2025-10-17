@@ -1,10 +1,17 @@
 
 include::includes/browser-context-page.adoc[Browser Context and Page]
+
 include::includes/workers.adoc[Workers]
+
 include::includes/timeout.adoc[Timeouts in Playwright]
+
 include::includes/retries.adoc[Retries]
+
 include::includes/flaky-tests.adoc[Flaky Tests]
+
 include::includes/tips-tricks.adoc[Tips & Tricks]
+
+
 
 
 

@@ -1,0 +1,26 @@
+== GitHub
+GitHub is a widely used platform for version control and collaboration that allows developers to host and review code, manage projects, and build software alongside millions of other developers. It provides a web-based interface for Git repositories, enabling teams to work together more efficiently.
+
+The repositories stored in the GitHub must follow the best practices and guidelines especiallty with the conventional commit messages, in order to have a better tracking of the changes made to the codebase and to facilitate collaboration among team members. The structured commit messages help in generating changelogs, automating releases, and improving the overall maintainability of the project.
+
+*Conventional Commit Messages*:
+    - feat: A new feature has been added to the codebase.
+    - fix: A bug has been fixed in the codebase.
+    - docs: Documentation has been updated or added.
+    - style: Code style or formatting changes that do not affect functionality.
+    - refactor: Code changes that neither fix a bug nor add a feature but improve the code structure.
+    - test: Adding or updating tests without affecting the production code.
+    - chore: Changes to the build process, dependencies, or other non-production code tasks.
+
+*Example Commit Messages*:
+    - feat: added agents integration
+    - fix: resolved issue with user authentication
+    - docs: updated API documentation
+    - style: improved code formatting and indentation
+    - refactor: simplified user registration logic
+    - test: added unit tests for payment processing
+    - chore: updated dependencies to latest versions
+
+*References*:
+    - https://www.conventionalcommits.org/en/v1.0.0/
+    - https://docs.github.com/en/get-started/quickstart/contributing-to-projects
