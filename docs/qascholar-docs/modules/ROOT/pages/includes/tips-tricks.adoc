@@ -2,10 +2,11 @@
 
 The following are some useful tips and tricks that may enhance your experience with the test automation framework and activities
 
-** PlayWright Specific **
+*PlayWright Specific:*
+
 The following are some tips and tricks specific to PlayWright.
 
-** 1) How to run tests repeatedly to discover flakiness on the tests? **
+1) How to run tests repeatedly to discover flakiness on the tests? *
 
 You can use the `--repeat` option with the Playwright test command to run your tests multiple times. This is useful for identifying flaky tests that may pass or fail intermittently.
 
@@ -23,15 +24,12 @@ It is also recommended to use the `--workers=1` option to ensure that tests are 
 npx playwright test --repeat-each=5 --workers=1
 ```
 
-
-
-** Miscellaneous **
+*Miscellaneous:*
 
 The following are some miscellaneous tips and tricks.
 
-** 1) How to find your CPU core count (physical and logical) **
+1) How to find your CPU core count (physical and logical) **
 
-== how to find your CPU core count (physical and logical)
 
 *Option 1*: Using Task Manager (the easiest way)
 
