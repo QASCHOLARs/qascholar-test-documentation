@@ -1,0 +1,117 @@
+
+Test automation is a critical component of modern software development, enabling teams to quickly identify and address issues in their codebase. However, one of the challenges faced by developers and testers alike is the presence of flaky tests—tests that produce inconsistent results without any changes to the code being tested. Flaky tests can lead to wasted time, increased maintenance efforts, and a lack of confidence in the test suite.
+
+To effectively manage flaky tests, consider the following strategies:
+
+1. **Identify Flaky Tests**: Use test reporting tools to identify tests that frequently fail and pass on subsequent runs. This can help you pinpoint problematic tests that may need further investigation.
+
+2. **Analyze Failure Causes**: Investigate the root causes of flakiness by reviewing logs, screenshots, and other artifacts generated during test execution. Look for patterns that may indicate environmental issues, timing problems, or dependencies on external systems.
+
+3. **Implement Retries**: Configure retries for flaky tests to reduce the impact of transient failures. However, use retries judiciously, as excessive retries can mask underlying issues.
+
+4. **Isolate Tests**: Ensure that tests are isolated from each other to prevent shared state from causing flakiness. Use techniques such as mocking and stubbing to eliminate dependencies on external systems.
+
+5. **Improve Test Stability**: Refactor flaky tests to improve their stability. This may involve adding waits, increasing timeouts, or using more reliable selectors.
+
+6. **Monitor Test Results**: Continuously monitor test results to identify new flaky tests as they arise. Implement alerts to notify the team when flakiness is detected.
+
+7. **Educate the Team**: Foster a culture of quality by educating the team about the importance of writing stable tests. Encourage best practices for test design and implementation.
+
+By proactively managing flaky tests, you can improve the reliability of your test suite and ensure that it provides accurate feedback on the health of your codebase.
+
+For more detailed guidance on handling flaky tests, refer to the [QA Scholar documentation on flaky tests](https://docs.qascholar.com/flaky-tests).
+
+consider the following test suite that demonstrates handling flaky tests using retries and logging:
+
+[source, js]
+````
+const { test, expect } = require('@playwright/test');
+
+test.describe.configure({ mode: 'serial', retries: 2 });
+
+test.describe('Retries Example', () => {
+  test.beforeEach(async ({ page }, testInfo) => {
+    console.log(
+      `Running test: ${testInfo.title}, attempt: ${testInfo.retry}, workerID: ${testInfo.workerIndex}`
+    );
+  });
+
+  test('Test1', async ({ page }) => {
+    console.log('Executing Test1');
+  });
+
+  test('Test2', async ({ page }) => {
+    console.log('Executing Test2');
+  });
+
+  test('Test3', async ({ page }) => {
+    console.log('Executing Test3');
+    let flakyTestAttempts = Math.floor(Math.random() * 2);
+    if (flakyTestAttempts)
+      throw new Error('Intentional Failure to demonstrate retries');
+  });
+  test('Test4', async ({ page }) => {
+    console.log('Executing Test4');
+  });
+  test('Test5', async ({ page }) => {
+    console.log('Executing Test5');
+  });
+});
+````
+
+This test suite is configured to run in serial mode with a maximum of 2 retries for each test. The `beforeEach` hook logs the test title, attempt number, and worker ID before each test execution. The `Test3` is designed to fail randomly to demonstrate the retry mechanism and flaky test handling.
+
+For more detailed guidance on handling flaky tests, refer to the [QA Scholar documentation on flaky tests](https://docs.qascholar.com/flaky-tests).
+
+*
+*The output logs for the above test suite might look like this:*
+
+````
+Running 5 tests using 1 worker
+retries-test-describe-mode-serial-with-retries-flaky-tests.spec.js:14:3 › Retries Example › Test1
+Running test: Test1, attempt: 0, workerID: 0
+Executing Test1                                                                                        
+retries-test-describe-mode-serial-with-retries-flaky-tests.spec.js:18:3 › Retries Example › Test2
+Running test: Test2, attempt: 0, workerID: 0
+Executing Test2                                                                                        
+retries-test-describe-mode-serial-with-retries-flaky-tests.spec.js:22:3 › Retries Example › Test3
+Running test: Test3, attempt: 0, workerID: 0
+Executing Test3                                                                                        
+retries-test-describe-mode-serial-with-retries-flaky-tests.spec.js:14:3 › Retries Example › Test1
+Running test: Test1, attempt: 1, workerID: 1
+Executing Test1                                                                                        
+retries-test-describe-mode-serial-with-retries-flaky-tests.spec.js:18:3 › Retries Example › Test2
+Running test: Test2, attempt: 1, workerID: 1
+Executing Test2                                                                                        
+retries-test-describe-mode-serial-with-retries-flaky-tests.spec.js:22:3 › Retries Example › Test3
+Running test: Test3, attempt: 1, workerID: 1
+Executing Test3                                                                                        
+  1) retries-test-describe-mode-serial-with-retries-flaky-tests.spec.js:22:3 › Retries Example › Test3 
+
+    Error: Intentional Failure to demonstrate retries
+
+      26 |     //test.fail(true, 'Intentional Failure to demonstrate retries');
+      27 |     if (flakyTestAttempts)
+    > 28 |       throw new Error('Intentional Failure to demonstrate retries');
+         |             ^
+      29 |   });
+      30 |   test('Test4', async ({ page }) => {
+      31 |     console.log('Executing Test4');
+        at E:\QASCHOLAR\PlayWright\Batch#2\playwright-orangehrm-autosuite\pw-tests-examples\playwright-features\retries\retries-test-describe-mode-serial-with-retries-flaky-tests.spec.js:28:13
+
+retries-test-describe-mode-serial-with-retries-flaky-tests.spec.js:30:3 › Retries Example › Test4      
+Running test: Test4, attempt: 1, workerID: 1
+Executing Test4
+retries-test-describe-mode-serial-with-retries-flaky-tests.spec.js:33:3 › Retries Example › Test5      
+Running test: Test5, attempt: 1, workerID: 1
+Executing Test5
+  1 flaky
+    retries-test-describe-mode-serial-with-retries-flaky-tests.spec.js:22:3 › Retries Example › Test3  
+  4 passed (2.9s)
+````
+
+The output logs will provide insights into the execution flow and help identify flaky tests effectively.
+
+* Please note that the tests that are categorized as flaky by the test runner are not counted in the total test count in the summary report and displayed as flaky tests.*
+
+*All: 5 tests, 4 passed, 10 failed, flaky tests: 1, skipped: 0*

@@ -1,0 +1,39 @@
+@startuml
+title Playwright Worker Lifecycle and Replacement
+
+actor "Test Runner" as Runner
+participant "Worker #1" as W1
+participant "Worker #2" as W2
+participant "Worker #3" as W3
+participant "Worker #4 (Replacement)" as W4
+
+== Initial Execution ==
+Runner -> W1: Start Worker #1 (runs TestFileA)
+Runner -> W2: Start Worker #2 (runs TestFileB)
+Runner -> W3: Start Worker #3 (runs TestFileC)
+note right of Runner: Max workers = 3
+
+== During Execution ==
+W1 --> Runner: TestFileA passed
+W2 --> Runner: TestFileB failed (non-fatal)
+note right of W2: Worker continues with next test file
+
+== Fatal Crash ==
+W3 --> Runner: Crash/Error signal
+Runner -> W3: Terminate Worker #3
+note right of Runner: Worker #3 is dead
+
+== Replacement ==
+Runner -> Runner: Check active workers (only 2 running)
+Runner -> W4: Spawn new Worker #4 (replacement)
+note right of Runner: Total active = 3 (still within limit)
+
+W4 -> Runner: Run remaining TestFileD
+
+== Completion ==
+W1 --> Runner: Done
+W2 --> Runner: Done
+W4 --> Runner: Done
+Runner -> Runner: Aggregate results and retries if needed
+
+@enduml
