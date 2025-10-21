@@ -1,0 +1,101 @@
+== Locators
+
+Locators are used in Playwright to identify and interact with elements on a web page. They provide a way to target specific elements for actions such as clicking, typing, or verifying content.
+
+
+In modern web applications, especially those built with frameworks like React, Angular, or Vue.js, the HTML structure of the page may not be fully rendered on the server side. Instead, when you request for the page, browser will construct the *DOM tree* using the files received from the server and then construct the page dynamically using the javascript. This is the modern way of constructing the web pages called single-page application (SPA). The server may not have the complete HTML of the page, but the browser will construct the complete HTML using the javascript.
+
+With the DOM tree constructed in the browser, Accessibility module in the browser will construct the *Accessibility Tree* from the DOM tree. The Accessibility Tree is a representation of the UI elements of a web page that is used by assistive technologies (like screen readers) to help users with disabilities navigate and interact with web content. The accessibility tree is derived from the DOM tree but focuses on elements that are relevant for accessibility purposes. Elements in the accessibility tree are assigned roles, names, and properties that describe their purpose and behavior. These attributes help assistive technologies understand how to present and interact with the content. These are called ARIA roles and properties, and also called as user-visible locators.(Because these locators are visible to the users of the web page)
+
+In such cases, user-visible locators are more reliable as they are less likely to change compared to implementation details like CSS selectors or XPath.
+
+*PlayWright recommends using user-visible locators to ensure that your tests are robust and maintainable, especially in dynamic web applications.*
+
+Playwright recommends to use *user visible locators* to locate the elements which are the locators that user can see in the web page. There are less likely chances that user visible locators undergo changes, compared to the underlying implementation details.
+
+The modern web applications are built using the HTML native elements along with the custom elements. The HTML native elements have the built-in accessibility features, which makes it easier to locate them using user-visible locators. The custom elements can also be made accessible by adding the appropriate ARIA roles and properties.
+
+HTML has a set of native elements that come with semantic or without semantic meanings. The semantic elements are designed to convey their purpose and function to both users and assistive technologies.
+
+Examples of HTML native elements include:
+
+* `<button>`: Represents a clickable button.
+* `<a>`: Represents a hyperlink.
+* `<input>`: Represents an input field for user data.
+* `<form>`: Represents a form for user input.
+* `<nav>`: Represents a section of navigation links.
+* `<header>`: Represents the header section of a document or section.
+* `<footer>`: Represents the footer section of a document or section.
+
+Non-semantic elements do not convey any specific meaning about their content or purpose. 
+
+Examples of non-semantic elements include:
+* `<div>`: A generic container for flow content.
+* `<span>`: A generic inline container for phrasing content.
+
+Accessibility module in the browser has implicit knowledge about the HTML native elements and their roles. For example, a `<button>` element is automatically assigned the role of "button" in the accessibility tree. However, for non-semantic elements like `<div>` or `<span>`, developers need to explicitly define their roles using ARIA attributes to make them accessible.
+
+There are accessibility testing tools and browser extensions available that can help developers identify accessibility issues in their web applications and ensure that the elements are properly defined with appropriate roles and properties.
+
+
+*Playwright provides several built-in locators that leverage user-visible attributes to identify elements on a web page.*
+
+Some of the commonly used user-visible locators in Playwright include:
+
+*page.getByRole(role, options)*: Locate elements by their ARIA role.
+  Example: `page.getByRole('button', { name: 'Submit' })`
+
+*page.getByLabel(label, options)*: Locate form elements by their associated label text.
+  Example: `page.getByLabel('Username')`
+
+*page.getByPlaceholder(placeholder, options)*: Locate input elements by their placeholder text.
+  Example: `page.getByPlaceholder('Enter your email')`
+
+*page.getByText(text, options)*: Locate elements by their visible text content.
+    Example: `page.getByText('Welcome to Playwright')`
+
+*page.getByTestId(testId, options)*: Locate elements by a custom data-testid attribute.
+  Example: `page.getByTestId('submit-button')`
+
+*page.getByAltText(altText, options)*: Locate images and other elements by their alt text.
+  Example: `page.getByAltText('Company Logo')`
+
+*page.getByTitle(title, options)*: Locate elements by their title attribute.
+  Example: `page.getByTitle('Close')`
+
+Besides these user-visible locators, Playwright also supports traditional locators like CSS selectors and XPath, but they are not recommended for dynamic web applications.
+
+Overall, using user-visible locators enhances the reliability and maintainability of your tests, making them less susceptible to changes in the underlying implementation of the web application.
+
+For more details, refer to the official Playwright documentation on [Locators](https://playwright.dev/docs/locators).
+
+
+
+
+*page.getByTestId(testId, options)*: 
+Locate elements by a custom data-testid attribute.
+
+This locator is particularly useful for testing purposes, as developers can add *`data-testid`* attributes to elements specifically for identification in tests without affecting the user experience.  The tests can then reliably locate these elements regardless of changes to the UI or styling as long as the *`data-testid`* attributes remain unchanged. 
+
+This approach of having *`data-testid`* attributes to the elements to make tests resilient and maintainable - developers must ensure that these attributes are added to the application. This is a common practice in modern web development to facilitate testing, and does not affect the end-user experience since it is not visible in the UI.
+
+  Example: `page.getByTestId('submit-button')`
+
+If you still want to use the user-visible locators, you can use other locators like `page.getByRole`, `page.getByLabel`, etc.
+
+However, if the application does not have user-visible locators or *`data-testid`* attributes, you can use traditional locators like CSS selectors or XPath, but tests using these locators may be more brittle and prone to breaking with UI changes.
+
+Please note that you can add any name to the user defined attributes besides *`data-testid`*  but you must inform the test runner to use that attribute for locating the elements. For example, if you want to use *`data-test`* instead of *`data-testid`*, you need to configure Playwright to recognize *`data-test`* as the test id attribute.
+
+To configure Playwright to use a custom attribute like *`data-test`* for test IDs, you can set it up in your Playwright configuration file. 
+
+Here's an example of how to do this:
+```javascript
+// playwright.config.js
+module.exports = {
+  use: {
+    testIdAttribute: 'data-test',
+  },
+};
+```
+This configuration tells Playwright to use the *`data-test`* attribute when you use the `page.getByTestId` locator in your tests.
