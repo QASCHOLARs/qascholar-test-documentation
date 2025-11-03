@@ -13,6 +13,8 @@ include::includes/tips-tricks.adoc[Tips & Tricks]
 
 include::includes/locators.adoc[Locators]
 
+include::includes/pom.adoc[Page Object Model (POM)]
+
 
 
 
