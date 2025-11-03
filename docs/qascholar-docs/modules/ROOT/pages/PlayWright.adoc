@@ -15,6 +15,8 @@ include::includes/locators.adoc[Locators]
 
 include::includes/pom.adoc[Page Object Model (POM)]
 
+include::includes/assertions.adoc[Assertions in Playwright]
+
 
 
 
