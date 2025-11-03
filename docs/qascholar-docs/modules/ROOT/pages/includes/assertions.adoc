@@ -1,0 +1,127 @@
+== Assertions in Playwright
+Assertions are used in Playwright to verify that certain conditions are met during test execution. They help ensure that the application behaves as expected. Playwright provides a variety of built-in assertions that can be used to validate different aspects of the web application.
+
+Playwright provides an `expect` API that allows you to perform assertions on various elements and states within your tests.
+
+Playwright offers different types of assertions to validate various conditions in your tests:
+*general-purpose assertions*
+*locators assertions*
+*page assertions*
+*snapshot assertions*
+*api response assertions*
+
+
+Each type of assertion serves a specific purpose and can be used to validate different aspects of test during the test execution.
+
+*General-Purpose Assertions*
+General-purpose assertions are used to validate common conditions such as equality, truthiness, and existence. The assertions can be applied to any value or object in your tests but not on the DOM elements.
+
+Some examples include:   
+- `toBe(value)`: Asserts that a value is equal to the expected value.
+- `toBeTruthy()`: Asserts that a value is truthy.
+- `toBeFalsy()`: Asserts that a value is falsy.
+
+*Locator Assertions*
+Locator assertions are used to validate the state and properties of elements within the page. These assertions can be applied to locators, which represent elements in the DOM.
+
+Some examples include:
+- `toBeVisible()`: Asserts that an element is visible on the page.
+- `toHaveText(text)`: Asserts that an element contains the expected text.   
+- `toHaveAttribute(name, value)`: Asserts that an element has the specified attribute with the expected value.
+
+*Page Assertions*
+Page assertions are used to validate the overall state of the page, such as its URL, title, and content.
+
+Some examples include:
+- `toHaveURL(url)`: Asserts that the page has the expected URL.
+- `toHaveTitle(title)`: Asserts that the page has the expected title.
+- `toContainText(text)`: Asserts that the page contains the expected text.
+
+*Snapshot Assertions*
+Snapshot assertions are used to compare the current state of an element or page against a previously saved snapshot. This is useful for visual regression testing.
+
+Some examples include:
+- `toMatchSnapshot(name)`: Asserts that the current state matches the saved snapshot with the specified name.
+- `toMatchImageSnapshot(name)`: Asserts that the current visual appearance matches the saved image snapshot with the specified name.
+    
+*API Response Assertions*
+API response assertions are used to validate the structure and content of API responses in your tests.
+
+Some examples include:
+- `toHaveStatus(status)`: Asserts that the API response has the expected status code.
+- `toHaveJSONBody(expectedBody)`: Asserts that the API response has the expected JSON body.
+
+These are just a few examples of the types of assertions available in Playwright. By using these assertions effectively, you can ensure that your tests accurately validate the behavior of your web application.
+
+There is configuration timeout for assertions in Playwright which can be set globally or per assertion basis to control how long Playwright should wait for the expected condition to be met before failing the test.
+
+By default, Playwright waits up to 5 seconds for an assertion to pass. You can customize this timeout by passing an options object with a `timeout` property to the assertion method. 
+
+For example, to set a custom timeout of 10 seconds for a specific assertion, you can do the following:
+```javascript
+await expect(locator).toBeVisible({ timeout: 10000 });  
+```
+This flexibility allows you to adjust the timeout based on the specific needs of your tests and the behavior of the application under test.
+
+you can also set a global timeout for all assertions in your Playwright configuration file:
+```javascript
+module.exports = {
+    expect: {
+        timeout: 10000 // Set global timeout to 10 seconds
+    }
+};  
+```
+This global setting will apply to all assertions in your tests, unless overridden by a specific timeout value in an individual assertion.
+
+Lets also understand the soft and hard assertions in Playwright.
+*Hard Assertions*
+Hard assertions immediately fail the test if the assertion condition is not met. This means that if a hard assertion fails, the test execution stops, and no further steps are executed.
+
+```javascript
+await expect(locator).toBeVisible();
+```
+In this example, if the element represented by `locator` is not visible, the test will fail immediately.       
+
+*Soft Assertions*
+Soft assertions, on the other hand, allow the test to continue executing even if the assertion condition is not met. This means that if a soft assertion fails, the test will log the failure but will not stop execution.
+
+```javascript
+
+await page
+    .getByRole('textbox', { name: 'Enter first & last name' })
+    .fill('Chary Chelloji');
+
+await expect
+    .soft(page.getByRole('textbox', { name: 'Enter first & last name' }),'assertion-1')
+    .toHaveValue('Chary Chelloji-1', { timeout: 5000 });
+
+  await expect
+    .soft(page.getByRole('textbox', { name: 'Enter first & last name' }),'assertion-2')
+    .toHaveValue('Chary Chelloji-2', { timeout: 5000 });
+
+```
+
+In this example, if either of the soft assertions fails, the test will log the failure but will continue executing the subsequent steps. This allows you to collect multiple assertion results in a single test run.
+
+
+*expect.soft()* is used to create soft assertions in Playwright. It allows the test to continue executing even if the assertion fails, enabling you to gather multiple assertion results in a single test run.
+
+*expect.poll()* is used to repeatedly evaluate an assertion until it passes or a timeout is reached. It is useful for scenarios where the expected condition may take some time to be met, such as waiting for an element to appear or a value to change.
+
+```javascript
+await expect.poll(async () => {
+    const text = await locator.textContent();
+    return text;
+}).toBe('Expected Text', { timeout: 10000 });
+```
+In this example, the `expect.poll()` method repeatedly checks the text content of the element represented by `locator` until it matches 'Expected Text' or the timeout of 10 seconds is reached. This is useful for handling dynamic content that may not be immediately available.
+
+*expect.toPass()* is used to create assertions that are expected to pass. It is useful for scenarios where you want to explicitly indicate that an assertion should always succeed.
+```javascript
+await expect.toPass(async () => {
+    const value = await locator.inputValue();
+    return value;
+}).toBe('Expected Value');
+
+```
+In this example, the `expect.toPass()` method is used to assert that the input value of the element represented by `locator` is equal to 'Expected Value'. This indicates that the assertion is expected to pass under normal circumstances.
