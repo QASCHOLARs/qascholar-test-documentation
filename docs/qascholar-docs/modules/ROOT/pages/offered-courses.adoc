@@ -1,0 +1,17 @@
+== Knowledge Base of Offered Courses
+ 
+ This section provides a comprehensive overview of the courses offered in the QAScholar. Each course is designed to equip students with the necessary skills and knowledge to excel in the field of software testing and quality assurance.
+ 
+ .Course List
+ * [[Playwright]]== Playwright Essentials
+ 
+
+ .Course Descriptions
+
+ [[Playwright]]
+ === Playwright Essentials
+ This course covers the basics of Playwright, including installation, setup, and fundamental concepts for effective test automation.
+ 
+
+ 
+ For more details on each course, including syllabus and enrollment information, please reach out to chary.chelloji@qascholar.com.

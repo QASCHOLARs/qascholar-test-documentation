@@ -1,0 +1,31 @@
+@startuml
+title Page Object Model in Playwright
+
+actor "Playwright Test" as Runner
+participant "POM File" as POM1
+
+== Create object for POM1 ==
+Runner -> POM1: create object for POM1
+note right of POM1: Initiate Locators references
+
+== During Execution ==
+POM1 --> Runner: TestFileA passed
+note right of W2: Worker continues with next test file
+
+== Fatal Crash ==
+W3 --> Runner: Crash/Error signal
+Runner -> W3: Terminate Worker #3
+note right of Runner: Worker #3 is dead
+
+== Replacement ==
+Runner -> Runner: Check active workers (only 2 running)
+Runner -> W4: Spawn new Worker #4 (replacement)
+note right of Runner: Total active = 3 (still within limit)
+
+W4 -> Runner: Run remaining TestFileD
+
+== Completion ==
+POM1 --> Runner: Done
+Runner -> Runner: Aggregate results and retries if needed
+
+@enduml

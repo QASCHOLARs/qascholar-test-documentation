@@ -1,0 +1,90 @@
+== Page Object Model (POM)
+
+The Page Object Model (POM) is a design pattern commonly used in test automation to enhance test maintenance and reduce code duplication. In POM, each web page of the application is represented by a separate class, known as a "page object." This class contains methods that interact with the elements on that page, encapsulating the page's behavior and structure.
+
+=== Benefits of POM
+
+1. **Improved Maintainability**: Changes to the UI only require updates to the corresponding page object, not every test case.
+2. **Code Reusability**: Common actions can be reused across multiple tests, reducing duplication.
+3. **Enhanced Readability**: Tests become more readable and easier to understand, as they focus on high-level actions rather than low-level details.
+
+=== Implementing POM
+
+To implement POM, follow these steps:
+
+1. **Create Page Object Classes**: For each web page, create a corresponding class that represents that page.
+2. **Define Locators**: In each page object, define locators for the elements you want to interact with.
+3. **Implement Methods**: Add methods to the page object that perform actions on the page, such as clicking buttons or entering text.
+4. **Use Page Objects in Tests**: In your test cases, use the page objects to interact with the application, rather than directly interacting with the UI elements.
+
+=== Example
+
+```javascript
+// Example of a Page Object in JavaScript in Playwright
+
+class LoginPage {
+    constructor(page) {
+        this.page = page;
+        this.usernameInput = page.locator("#username");
+        this.passwordInput = page.locator("#password");
+        this.loginButton = page.locator("#login");
+    }
+
+    async login(username, password) {
+        await this.usernameInput.fill(username);
+        await this.passwordInput.fill(password);
+        await this.loginButton.click();
+    }
+}
+```
+
+In this example, the `LoginPage` class represents the login page of the application. It encapsulates the locators and actions related to the login page, making it easy to use in test cases.
+
+        self.usernameInput = page.locator("#username")
+        self.passwordInput = page.locator("#password")
+        self.loginButton = page.locator("#login")
+
+        async  login(self, username, password):
+        await self.usernameInput.fill(username)
+        await self.passwordInput.fill(password)
+        await self.loginButton.click()
+```
+
+In this example, the `LoginPage` class represents the login page of the application. It encapsulates the locators and actions related to the login page, making it easy to use in test cases.
+
+we can use the `LoginPage` class in our test cases as follows:
+
+````javascript
+const { test, expect } = require('@playwright/test');
+const LoginPage = require('./LoginPage');
+
+test('login test', async ({ page }) => {
+    const loginPage = new LoginPage(page);
+    await loginPage.login('username', 'password');
+    // Add assertions here
+});
+````
+
+Lets dive into the implementation details as to how POM design pattern works.
+
+In the test case above, we create an instance of the `LoginPage` class and use its `login` method to perform the login action. This keeps the test case clean and focused on the high-level action of logging in, rather than the details of how the login is performed.
+
+When an object is created for the `LoginPage` class, it requires a `page` object as a parameter. This `page` object is provided by Playwright and represents the browser page that the tests will interact with.
+
+The `page` object is essential for the page object to function correctly, as it allows the page object to locate and interact with elements on the web page. By passing the `page` object to the page object class, we ensure that all interactions are performed on the correct browser context.
+
+Upon instantiation, the `LoginPage` class initializes its locators using the provided `page` object using the constructor method. 
+
+* `this.usernameInput`, `this.passwordInput`, and `this.loginButton` are initialized with locators that point to the respective elements on the login page but elements are not interacted with at this point. The locators are simply references to the elements, allowing the page object to interact with them later when the methods are called.  This is called as "lazy initialization" of locators.
+
+* The actual interaction with the elements (filling in the username and password, clicking the login button) occurs within the `login` method when it is called during the test execution, so playwright identifies elements in the DOM using the locators references created during instantiation.
+
+* if DOM changes between the time of instantiation and the time of interaction, the locators will still be valid as they are resolved at the time of interaction. There will not stale element references issues as playwright resolves the locators at the time of interaction every time unlike selenium page factory design pattern that stores the identified element in the memory/cache. So next time when the element is interacted with, if the DOM has changed, it may lead to stale element reference exceptions.
+
+image::pom.png[POM Design Pattern]
+
+
+
+
+
+

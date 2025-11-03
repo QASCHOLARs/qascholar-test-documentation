@@ -99,3 +99,77 @@ module.exports = {
 };
 ```
 This configuration tells Playwright to use the *`data-test`* attribute when you use the `page.getByTestId` locator in your tests.
+
+
+Shadow DOM:
+
+[source, javascript]
+```javascript
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Custom x-details Example</title>
+</head>
+<body>
+
+<x-details>
+  <div>Title</div>
+</x-details>
+
+<script>
+  class XDetails extends HTMLElement {
+    constructor() {
+      super();
+
+      // Attach shadow DOM
+      const shadow = this.attachShadow({ mode: 'open' });
+
+      // Create wrapper button
+      const button = document.createElement('button');
+      button.textContent = this.querySelector('div')?.textContent || 'Details';
+      button.setAttribute('aria-expanded', 'false');
+
+      // Create details container
+      const details = document.createElement('div');
+      details.id = 'inner-details';
+      details.textContent = 'Here are the details!';
+      details.style.display = 'none'; // hidden by default
+
+      // Toggle details on button click
+      button.addEventListener('click', () => {
+        const expanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', String(!expanded));
+        details.style.display = expanded ? 'none' : 'block';
+      });
+
+      // Add styles
+      const style = document.createElement('style');
+      style.textContent = `
+        button {
+          padding: 8px 12px;
+          cursor: pointer;
+          font-size: 16px;
+        }
+        #inner-details {
+          margin-top: 8px;
+          padding: 6px;
+          border: 1px solid #ccc;
+          background: #f9f9f9;
+        }
+      `;
+
+      // Append to shadow DOM
+      shadow.appendChild(style);
+      shadow.appendChild(button);
+      shadow.appendChild(details);
+    }
+  }
+
+  // Define custom element
+  customElements.define('x-details', XDetails);
+</script>
+
+</body>
+</html>
+```
