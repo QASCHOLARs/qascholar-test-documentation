@@ -2,13 +2,13 @@
 
 The Page Object Model (POM) is a design pattern commonly used in test automation to enhance test maintenance and reduce code duplication. In POM, each web page of the application is represented by a separate class, known as a "page object." This class contains methods that interact with the elements on that page, encapsulating the page's behavior and structure.
 
-=== Benefits of POM
+*Benefits of POM*
 
 1. **Improved Maintainability**: Changes to the UI only require updates to the corresponding page object, not every test case.
 2. **Code Reusability**: Common actions can be reused across multiple tests, reducing duplication.
 3. **Enhanced Readability**: Tests become more readable and easier to understand, as they focus on high-level actions rather than low-level details.
 
-=== Implementing POM
+*Implementing POM*
 
 To implement POM, follow these steps:
 
@@ -17,7 +17,7 @@ To implement POM, follow these steps:
 3. **Implement Methods**: Add methods to the page object that perform actions on the page, such as clicking buttons or entering text.
 4. **Use Page Objects in Tests**: In your test cases, use the page objects to interact with the application, rather than directly interacting with the UI elements.
 
-=== Example
+*Example*
 
 ```javascript
 // Example of a Page Object in JavaScript in Playwright
@@ -48,7 +48,7 @@ In this example, the `LoginPage` class represents the login page of the applicat
         await self.usernameInput.fill(username)
         await self.passwordInput.fill(password)
         await self.loginButton.click()
-```
+
 
 In this example, the `LoginPage` class represents the login page of the application. It encapsulates the locators and actions related to the login page, making it easy to use in test cases.
 
