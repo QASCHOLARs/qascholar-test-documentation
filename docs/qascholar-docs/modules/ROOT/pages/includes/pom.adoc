@@ -81,6 +81,9 @@ Upon instantiation, the `LoginPage` class initializes its locators using the pro
 
 * if DOM changes between the time of instantiation and the time of interaction, the locators will still be valid as they are resolved at the time of interaction. There will not stale element references issues as playwright resolves the locators at the time of interaction every time unlike selenium page factory design pattern that stores the identified element in the memory/cache. So next time when the element is interacted with, if the DOM has changed, it may lead to stale element reference exceptions.
 
+image::pom.png[POM Design Pattern]
+
+
 
 
 
