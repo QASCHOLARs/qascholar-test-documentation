@@ -1,0 +1,183 @@
+== Design Patterns
+
+Test automation is a critical aspect of modern software development, and using design patterns can significantly enhance the effectiveness and maintainability of your test automation code. Design patterns provide a structured approach or guidance to solving common problems in software design.
+
+This section provides an overview of common design patterns used in test automation, their benefits, and guidelines on when to use them.
+
+*What are Design Patterns*
+
+Design patterns are typical solutions to common problems in software design. They are like *pre-made blueprints* that you can customize to solve a particular design problem in your code. Using design patterns can help improve code readability, maintainability, and scalability.
+
+By leveraging design patterns, you can create more robust and flexible test automation frameworks that are easier to understand and extend.
+
+*Common Design Patterns*
+Here are some commonly used design patterns:
+
+** Page Object Model (POM) Pattern
+  The Page Object Model pattern is widely used in test automation. It involves creating a separate class for each page of the application, encapsulating the page elements and actions within that class. This helps to reduce code duplication and improve maintainability.
+
+** Factory Pattern
+  The Factory pattern provides a way to create objects without specifying the exact class of the object that will be created. This is useful for managing and maintaining a large number of related classes.
+
+** Singleton Pattern
+  The Singleton pattern ensures that a class has only one instance and provides a global point of access to it. This is useful when exactly one object is needed to coordinate actions across the system.
+
+** Observer Pattern
+  The Observer pattern defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
+
+** Strategy Pattern
+  The Strategy pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. This allows the algorithm to vary independently from clients that use it.
+
+** Decorator Pattern
+  The Decorator pattern allows behavior to be added to individual objects, either statically or dynamically, without affecting the behavior of other objects from the same class.
+
+** Fluent Pattern
+  The Fluent pattern is used to create more readable and expressive code by chaining method calls together. This is particularly useful in test automation for building complex test scenarios. 
+
+** Screenplay Pattern
+  The Screenplay pattern is an evolution of the Page Object Model that focuses on the interactions of actors with the system, promoting better separation of concerns and more reusable test components.
+
+** Builder Pattern
+  The Builder pattern separates the construction of a complex object from its representation, allowing the same construction process to create different representations. This is useful for creating test data or complex objects in a flexible way.
+
+*Benefits of Using Design Patterns*
+Using design patterns offers several benefits:
+
+* Reusability: Design patterns provide proven solutions that can be reused in different projects.
+* Maintainability: Code that follows design patterns is often easier to maintain and modify.
+* Communication: Design patterns provide a common vocabulary for developers, making it easier to communicate design ideas.
+* Best Practices: Design patterns encapsulate best practices and help avoid common pitfalls in software design.
+* Flexibility: Design patterns can help make code more flexible and adaptable to changing requirements.
+
+*When to Use Design Patterns*
+While design patterns can be very useful, it's important to use them judiciously. Here are some guidelines on when to use design patterns:
+
+* Solve a specific problem: Use a design pattern when you encounter a specific design problem that the pattern addresses.
+
+* Avoid over-engineering: Don't use design patterns just for the sake of using them. Ensure that they add value to your design.
+
+* Understand the pattern: Make sure you fully understand the design pattern and its implications before implementing it
+
+* Consider alternatives: Sometimes simpler solutions may be more appropriate than using a design pattern.
+
+By understanding and applying design patterns effectively, you can enhance the quality of your software designs and improve your development process.
+
+Lets dive deeper into each of these design patterns in the following sections.
+
+*Page Object Model Pattern*
+The Page Object Model pattern is widely used in test automation. It involves creating a separate class for each page of the application, encapsulating the page elements and actions within that class. This helps to reduce code duplication and improve maintainability. 
+
+Below is an example of how to implement the Page Object Model pattern in a test automation framework.
+
+```javascript
+class LoginPage {
+    constructor(page) {
+        this.page = page;
+        this.usernameField = page.locator('#username');
+        this.passwordField = page.locator('#password');
+        this.loginButton = page.locator('#login');
+    }
+
+    async login(username, password) {
+        await this.usernameField.fill(username);
+        await this.passwordField.fill(password);
+        await this.loginButton.click();
+    }
+}
+```
+In this example, the `LoginPage` class encapsulates the elements and actions related to the login page. The `login` method performs the login action by interacting with the page elements.
+
+Using the Page Object Model pattern helps to keep the test code clean and organized, making it easier to maintain and update as the application evolves.
+
+The LoginPage class file will be used in the test file as shown below:
+
+```javascript
+const { test } = require('@playwright/test');
+const LoginPage = require('./LoginPage');
+
+test('login test', async ({ page }) => {
+    const loginPage = new LoginPage(page);
+    await loginPage.login('username', 'password');
+});
+```
+In this test, we create an instance of the `LoginPage` class and use its `login` method to perform the login action. This keeps the test code simple and focused on the test logic, while the page-specific details are encapsulated within the `LoginPage` class.
+
+By following the Page Object Model pattern, you can create a more maintainable and scalable test automation framework.
+
+*Factory Pattern*
+
+The Factory pattern is a creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created. This is useful when you need to create objects that share a common interface but may have different implementations.
+
+In the context of test automation, the Factory pattern can be used to create page objects or test data objects without specifying the exact class of object that will be created. This can help to reduce coupling between components and make the test framework more flexible.
+
+Below is an example of how to implement the Factory pattern in a test automation framework.
+```javascript
+class PageFactory {
+    static createPage(pageType, page) {
+        switch (pageType) {
+            case 'LoginPage':
+                return new LoginPage(page);
+            case 'HomePage':
+                return new HomePage(page);
+            // Add more page types as needed
+            default:
+                throw new Error('Unknown page type: ' + pageType);
+        }
+    }
+}
+```
+In this example, the `PageFactory` class has a static method `createPage` that takes a `pageType` and a `page` object as parameters. Based on the `pageType`, it creates and returns an instance of the corresponding page class.
+
+Using the Factory pattern allows you to create page objects without tightly coupling your test code to specific page classes. This makes it easier to add new page types or modify existing ones without affecting the test code.
+
+To use the `PageFactory` in your test code, you can do the following:
+```javascript
+const { test } = require('@playwright/test');
+const PageFactory = require('./PageFactory');
+
+test('login test', async ({ page }) => {
+    const loginPage = PageFactory.createPage('LoginPage', page);
+    await loginPage.login('username', 'password');
+});
+```
+In this test, we use the `PageFactory` to create an instance of the `LoginPage` without directly referencing the `LoginPage` class. This decouples the test code from the specific page implementation, making it more flexible and easier to maintain.
+
+By following the Factory pattern, you can create a more modular and adaptable test automation framework.
+
+*Singleton Pattern*
+The Singleton pattern is a creational design pattern that ensures a class has only one instance and provides a global point of access to that instance. This is useful when exactly one object is needed to coordinate actions across the system, such as a configuration manager or a logging utility.
+
+Below is an example of how to implement the Singleton pattern in a test automation framework.
+```javascript
+class ConfigManager {
+    constructor() {
+        if (ConfigManager.instance) {
+            return ConfigManager.instance;
+        }
+        this.config = {};
+        ConfigManager.instance = this;
+    }
+
+    setConfig(key, value) {
+        this.config[key] = value;
+    }
+
+    getConfig(key) {
+        return this.config[key];
+    }
+}
+```
+In this example, the `ConfigManager` class ensures that only one instance of the class is created. If an instance already exists, it returns that instance instead of creating a new one. The class provides methods to set and get configuration values.
+
+To use the `ConfigManager` in your test code, you can do the following:
+```javascript
+const { test } = require('@playwright/test');
+const ConfigManager = require('./ConfigManager');   
+test('configuration test', async () => {
+    const configManager = new ConfigManager();
+    configManager.setConfig('baseUrl', 'https://example.com');
+    const baseUrl = configManager.getConfig('baseUrl');
+    console.log('Base URL:', baseUrl);
+});
+```
+In this test, we create an instance of the `ConfigManager` and use it to set and get configuration values. Regardless of how many times we create a `ConfigManager` instance, it will always refer to the same underlying instance.

@@ -24,5 +24,6 @@
 * xref:prompt-engineering.adoc[Prompt Engineering]
 * xref:azure.adoc[Microsoft Azure]
 * xref:accessibility-testing.adoc[Accessibility Testing]
-
+* xref:artifacts.adoc[Artifacts Repositories]
+* xref:design-patterns.adoc[Design Patterns]
 

@@ -1,0 +1,21 @@
+== Artifacts Repositories
+Artifacts repositories are used to store build artifacts, such as JAR files, WAR files, and other binary files that are produced during the build process. These repositories can be either local or remote, and they provide a way to manage and share artifacts across different projects and teams.
+
+*Types of Artifacts Repositories*
+
+There are several types of artifacts repositories that can be used in software development environments including:
+
+* Local Repositories: These are repositories that are hosted on the same server as the QA Scholar instance. They are typically used for storing artifacts that are specific to a particular project or team.
+
+* Remote Repositories: These are repositories that are hosted on a different server or service. They can be used to share artifacts across multiple projects or teams, and they often provide additional features such as versioning and access control.
+
+* Proxy Repositories: These repositories act as intermediaries between local and remote repositories. They can cache artifacts from remote repositories to improve performance and reduce bandwidth usage.
+
+
+*JFrog Artifactory*
+
+
+
+
+*Nexus Repository Manager*
+
