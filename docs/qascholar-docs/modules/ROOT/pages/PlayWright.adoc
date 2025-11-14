@@ -2,6 +2,8 @@
 
 include::includes/playwright-installation.adoc[Installation]
 
+include::includes/playwright-project.adoc[Project Structure]
+
 include::includes/browser-context-page.adoc[Browser Context and Page]
 
 include::includes/workers.adoc[Workers]
