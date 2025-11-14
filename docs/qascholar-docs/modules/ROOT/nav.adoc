@@ -1,6 +1,7 @@
 * xref:index.adoc[Home]
 * xref:offered-courses[Offered Courses]
 * xref:PlayWright.adoc[PlayWright]
+* xref:design-patterns.adoc[Design Patterns]
 * xref:robot-framework.adoc[Robot Framework]
 * xref:tosca.adoc[TOSCA]
 * xref:appium.adoc[Appium]
@@ -24,6 +25,8 @@
 * xref:prompt-engineering.adoc[Prompt Engineering]
 * xref:azure.adoc[Microsoft Azure]
 * xref:accessibility-testing.adoc[Accessibility Testing]
+* xref:ollama.adoc[Ollama]
 * xref:artifacts.adoc[Artifacts Repositories]
-* xref:design-patterns.adoc[Design Patterns]
+* xref:tools.adoc[Tools]
+
 
