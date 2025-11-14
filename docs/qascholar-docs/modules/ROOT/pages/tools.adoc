@@ -1,0 +1,18 @@
+== Important Tools
+
+This section provides an overview of some important tools that can enhance your experience with test automation. These tools are designed to help you manage your projects more efficiently and improve your workflow.
+
+*SectorsHub*: A comprehensive tool that provides selectors for all the web elements in your application. It helps you to easily identify and manage selectors, making your test scripts more robust and maintainable. *It is available as a browser extension for Chrome and Firefox*.
+
+*Test Data Manager*: This tool allows you to create, manage, and utilize test data effectively. It supports various data formats and provides features for data generation, masking, and versioning. *It can be integrated with your existing test automation framework*.
+
+*Wappalyzer*: A web application analysis tool that helps you identify the technologies used in your web applications. It provides insights into the frameworks, libraries, and tools employed, which can be useful for test automation planning. *It is available as a web service and a browser extension*.
+
+*Postman*: A powerful API testing tool that allows you to create, test, and document APIs. It provides a user-friendly interface for sending requests and analyzing responses, making it easier to automate API tests. *It supports collaboration through workspaces and version control*.
+
+*Built with Technology Provider*: A tool that helps you discover the technologies used by different websites. It provides detailed information about the frameworks, libraries, and services employed, which can aid in understanding the application under test. *It is available as a web service and a browser extension*.
+
+*Gofullpage*: A tool that captures full-page screenshots of web pages. It is useful for visual testing and documentation purposes, allowing you to see the entire layout of a page in a single image. *It is available as a web service and a browser extension*.
+
+
+These tools can significantly enhance your test automation efforts by providing additional capabilities and improving your workflow. Consider integrating them into your projects to take advantage of their features.

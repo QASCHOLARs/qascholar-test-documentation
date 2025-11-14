@@ -1,0 +1,186 @@
+== Installation
+
+*Pre-requisites*
+
+* Node.js (version 12 or higher)
+* Visual Studio Code (optional, but recommended for development)
+* Git
+* GitBash (for Windows users)
+* GitHub account (optional, but recommended for version control and collaboration)  
+* GitHub CLI (optional, but recommended for command-line interactions with GitHub)
+* Playwright extension for Visual Studio Code (optional, but recommended for enhanced Playwright support)
+* GitHub Copilot extension for Visual Studio Code (optional, but recommended for AI-assisted coding)
+
+*Node.js* can be downloaded and installed from the official website: https://nodejs.org/. Follow the installation instructions for your operating system.
+
+Node.js comes with npm (Node Package Manager), which is used to install Playwright and other packages.  Node.js installation also includes npx, a package runner tool that comes with npm 5.2.0 and higher. Node.js is required to run Playwright scripts and manage dependencies. PlayWright Core is a VITAL component in the Playwright framework that provides the essential functionalities for browser automation. It allows you to control browsers, interact with web pages, and perform various actions programmatically. PlayWright Core is built on top of Node.js, leveraging its capabilities to execute JavaScript code outside the browser environment.
+
+You can validation your Node.js installation by running the following commands in your terminal or command prompt:
+
+----
+node -v
+npm -v
+----
+
+*Visual Studio Code* can be downloaded from https://code.visualstudio.com/. It is a powerful code editor that supports various programming languages and extensions.
+
+*Git* can be downloaded from https://git-scm.com/. Follow the installation instructions for your operating system.
+
+You can validate the Git installation by running the following command in your terminal or command prompt:
+----
+git --version --build-options
+----
+
+*GitBash* can be downloaded from https://gitforwindows.org/. It provides a Unix-like terminal experience on Windows.
+
+You can validate the GitBash installation by running the following command in your terminal or command prompt:
+----
+bash --version
+----
+
+*GitHub* can be accessed at https://github.com/. It is a web-based platform for version control and collaboration. GitHub accounts are free to create. You can create an account by visiting the GitHub website and following the sign-up process. You can validate your GitHub account by logging in to the website. Please note that having a GitHub account is optional but recommended for version control and collaboration and remote repository management. Please remeber the GitHub credentails for future use.
+
+
+*GitHub CLI* can be installed by following the instructions at https://cli.github.com/. It allows you to interact with GitHub from the command line. Please follow the installation instructions for your operating system. 
+
+You can validate the GitHub CLI installation by running the following command in your terminal or command prompt:
+----
+gh --version
+----
+
+You require a GitHub account to authenticate the GitHub CLI. You can authenticate by running the following command in your terminal or command prompt:
+----
+gh auth login
+----
+
+For more details on using GitHub CLI, refer to the official documentation at https://cli.github.com/manual/.
+
+*Playwright Test extension for Visual Studio Code* can be installed from the Visual Studio Code marketplace. It provides enhanced support for Playwright development, including code snippets, debugging, and more.
+
+Please make sure to install the Playwright extension from Microsoft to improve your development experience with Playwright.
+
+*GitHub Copilot extension for Visual Studio Code* can also be installed from the Visual Studio Code marketplace. It provides AI-assisted coding features to help you write code faster and with fewer errors. You can find it by searching for "GitHub Copilot" in the extensions marketplace within Visual Studio Code. You will need a GitHub account to use GitHub Copilot and also ensure that you have an active subscription or are part of the free trial to access its features. If you want, you can also access the models from the local Ollama installation.
+
+
+
+After installing all the required tools and software, you can proceed to set up your Playwright project and start writing automation scripts.
+
+
+*Create a new directory for your Playwright project* and navigate into it using the terminal or command prompt:
+
+----
+mkdir playwright-project
+cd playwright-project
+----
+
+*Initialize a new Node.js project* by running the following command:
+----
+npm init -y
+----
+
+*Install Playwright* by running the following command:
+----
+npm install playwright
+----
+
+OR, you can use npm to install with below command which will also set up a basic Playwright project structure for you:
+----
+npm init playwright@latest  
+----
+
+*Install Playwright browsers* by running the following command:
+----
+npx playwright install
+----
+
+Or, if you want to install only specific browsers, you can use the following commands:
+----
+npx playwright install chromium
+npx playwright install firefox
+npx playwright install webkit
+----
+
+
+This command downloads and installs the necessary browser binaries (Chromium, Firefox, and WebKit) required for Playwright to function correctly.
+
+You can validate the Playwright installation by running the following command in your terminal or command prompt:
+
+----
+npx playwright --version
+----
+
+You can use JavaScript or TypeScript to write your Playwright scripts. If you choose TypeScript, make sure to set up the necessary configuration files, but you can start with *JavaScript* for simplicity.
+
+This command should display the installed Playwright version, confirming that the installation was successful.
+
+With these steps completed, you are now ready to start using Playwright for browser automation and testing.
+
+
+*Clone your Playwright project from the GitHub repository* and navigate into it using the terminal or command prompt:
+----
+git clone <repository-url>
+cd <repository-name>
+----
+Replace `<repository-url>` with the URL of your GitHub repository and `<repository-name>` with the name of the cloned repository.
+
+Please run the following command to install all the dependencies listed in the `package.json` file:
+----
+npm ci 
+----
+
+This command ensures that you have all the required packages and dependencies for your Playwright project.
+
+Please run the following command to install Playwright browsers if they are not already installed:
+----
+npx playwright install
+----
+
+*Verify the Playwright setup* by running a sample test script.
+
+Please run the following command to verify that everything is set up correctly:
+----
+npx playwright test
+----
+
+This command runs the Playwright test runner and executes any tests defined in your project. If everything is set up correctly, you should see the test results in the terminal.
+
+
+You can now start developing and running your Playwright scripts within this project.   
+
+*Note: Make sure to regularly commit and push your changes to the GitHub repository to keep your project up to date and collaborate with others effectively.
+
+Inside project directory, you can run several commands:
+
+----
+  npx playwright test
+    Runs the end-to-end tests.
+
+  npx playwright test --ui
+    Starts the interactive UI mode.
+
+  npx playwright test --project=chromium
+    Runs the tests only on Desktop Chrome.
+
+  npx playwright test example
+    Runs the tests in a specific file.
+
+  npx playwright test --debug
+    Runs the tests in debug mode.
+
+  npx playwright codegen
+    Auto generate tests with Codegen.
+
+We suggest that you begin by typing:
+
+    npx playwright test
+
+And check out the following files:
+  - .\tests\example.spec.js - Example end-to-end test
+  - .\tests-examples\demo-todo-app.spec.js - Demo Todo App end-to-end tests
+  - .\playwright.config.js - Playwright Test configuration
+----
+
+Visit https://playwright.dev/docs/intro for more information.
+
+*Additional Resources*
+For more information on Playwright installation and setup, refer to the official Playwright documentation: https://playwright.dev/docs/intro. Create repositories on GitHub to host your Playwright projects and collaborate with others. 

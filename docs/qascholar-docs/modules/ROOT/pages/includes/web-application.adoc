@@ -1,0 +1,28 @@
+
+
+
+
+
+.Table: Web Browsers and Their JavaScript Engines[options="header"]
+|===
+
+| **Browser**  | **Vendor / Developer** | **JavaScript Engine Name** | **Also Known As** | **Status**  |
+
+| **Google Chrome**                       | Google                      | **V8**                              | —                 | ✅ Active                |
+| **Microsoft Edge (Chromium-based)**     | Microsoft                   | **V8**                              | —                 | ✅ Active                |
+| **Mozilla Firefox**                     | Mozilla                     | **SpiderMonkey**                    | —                 | ✅ Active                |
+| **Apple Safari**                        | Apple                       | **JavaScriptCore**                  | **Nitro**         | ✅ Active                |
+| **Opera (Chromium-based)**              | Opera (owned by Kunlun/360) | **V8**                              | —                 | ✅ Active                |
+| **Brave**                               | Brave Software              | **V8**                              | —                 | ✅ Active                |
+| **Samsung Internet Browser**            | Samsung                     | **V8**                              | —                 | ✅ Active                |
+| **Tor Browser**                         | The Tor Project             | **SpiderMonkey**                    | —                 | ✅ Active                |
+| **Vivaldi**                             | Vivaldi Technologies        | **V8**                              | —                 | ✅ Active                |
+| **Opera (Pre-Chromium)**                | Opera Software              | **Carakan**                         | —                 | ❌ Discontinued          |
+| **Microsoft Edge (Legacy)**             | Microsoft                   | **Chakra**                          | —                 | ❌ Discontinued          |
+| **Internet Explorer (9–11)**            | Microsoft                   | **Chakra (JScript9)**               | —                 | ❌ Discontinued          |
+| **Internet Explorer (8 and below)**     | Microsoft                   | **JScript**                         | —                 | ❌ Discontinued          |
+| **Konqueror (KDE Browser)**             | KDE                         | **KJS**                             | —                 | 🟡 Mostly inactive      |
+| **Netscape Navigator**                  | Netscape                    | **SpiderMonkey** (original version) | —                 | ❌ Discontinued          |
+| **Adobe Acrobat / Reader (for web JS)** | Adobe                       | **Acrobat JavaScript Engine**       | —                 | ✅ Specialized use       |
+| **UC Browser**                          | UCWeb (Alibaba)             | **V8 (modified)**                   | —                 | ✅ Active (mobile)       |
+| **QQ Browser / 360 Browser**            | Tencent / Qihoo 360         | **V8 (modified Chromium)**          | —                 | ✅ Active (China market) |
