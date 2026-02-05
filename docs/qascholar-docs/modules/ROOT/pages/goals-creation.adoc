@@ -1,0 +1,69 @@
+
+== purpose
+
+Every project is driven by specific goals that define its purpose and direction. So, creating clear and actionable goals is essential for successful project management and execution. Goals help to align the team, prioritize tasks, and measure progress. They provide a roadmap for what needs to be achieved and help to keep everyone focused on the desired outcomes.
+
+The goals will actually guide the project team in their daily activities and decision-making processes. They serve as benchmarks for success and help to identify potential challenges and opportunities along the way.
+
+Ideally, goals will ideally be cascaded from higher-level organizational objectives, ensuring that the project contributes to the broader mission and vision of the organization. So the order of the goals starts from oragnizational goals, then product goals, and finally at the project level goals.
+
+Every project release will accompained with specific goals that need to be achieved to ensure the success of the release. These goals will be aligned with the overall project objectives and will help to ensure that the release meets the needs of stakeholders and delivers value to users.
+
+Its starting point is to understand the organizational goals, then product goals, and finally project goals. This hierarchical approach ensures that every project is aligned with the broader objectives of the organization, leading to more cohesive and effective outcomes.
+
+The project requirements will be derived from these goals, ensuring that every aspect of the project is focused on achieving the desired outcomes. By clearly defining and communicating these goals, project teams can work more effectively and efficiently towards successful project completion.
+
+The requirements in the jira will be linked to these goals, providing a clear connection between the tasks being performed and the overall objectives of the project. This linkage helps to ensure that every requirement is directly contributing to the achievement of the project goals, leading to more focused and purposeful work.
+
+The type of requirements in jira are ranging from epic,, user story, and task. Each of these requirement types plays a crucial role in breaking down the project goals into manageable and actionable components.
+
+The product goals will be decomposed into epics, which represent large bodies of work that can be further broken down into smaller user stories. User stories capture specific functionalities or features that need to be developed to achieve the product goals. Tasks are the individual actions or steps required to complete each user story. By linking these requirements to the project goals, teams can ensure that every piece of work is aligned with the overall objectives of the project.
+
+It will be advantageous to create goals at the epic level, as this allows for a more structured and organized approach to goal setting. By defining goals at the epic level, teams can ensure that each epic is directly contributing to the achievement of the broader project objectives. The delivery of the epic may span across multiple sprints, but sprint goals can be defined to focus on specific deliverables within each sprint. This approach helps to maintain clarity and focus throughout the project lifecycle, ensuring that all team members are aligned and working towards the same objectives.
+
+The goal creation should be done at Confluence since it has rich capabilities to create and track the progress of the goals. Confluence allows for easy collaboration among team members, enabling them to contribute to the goal creation process and provide feedback. Additionally, Confluence's integration with Jira allows for seamless linking of goals to project requirements, ensuring that all work is aligned with the defined objectives. By utilizing Confluence for goal creation, teams can enhance communication, improve transparency, and ultimately drive better project outcomes.
+
+
+
+
+
+
+
+== Goals Creation Process
+
+
+The goals creation process typically involves several key steps:
+.Identify Stakeholders
+  Gather input from all relevant stakeholders to understand their needs and expectations for the project.
+.Define Objectives
+  Clearly articulate the specific objectives that the project aims to achieve.
+.Set SMART Goals
+  Ensure that the goals are Specific, Measurable, Achievable, Relevant, and Time-bound.
+.Outline Action Plans
+    Develop detailed action plans that outline the steps needed to achieve each goal.
+.Implement and Monitor
+  Execute the action plans and continuously monitor progress towards the goals, making adjustments as necessary.
+
+
+
+
+
+
+
+
+
+When creating goals, it is important to ensure they are SMART: Specific, Measurable, Achievable, Relevant, and Time-bound. This framework helps to create goals that are clear and attainable, making it easier to track progress and make adjustments as needed.   
+By setting well-defined goals, teams can enhance collaboration, improve productivity, and ultimately achieve better results in their projects.
+[.image-container]
+image::../images/goals-creation.png[Goals Creation, width=600]
+[.note]
+.Note
+====
+Creating goals is a collaborative effort that involves input from all team members. This ensures that the goals are realistic and aligned with the team's capabilities and resources.
+Regularly reviewing and updating goals is also crucial to adapt to changing circumstances and ensure continued relevance throughout the project lifecycle.
+====
+[.tip]
+.Tip
+====
+Utilize project management tools to track goal progress and facilitate communication among team members. This can help in maintaining transparency and accountability throughout the project.
+====

@@ -28,5 +28,6 @@
 * xref:ollama.adoc[Ollama]
 * xref:artifacts.adoc[Artifacts Repositories]
 * xref:tools.adoc[Tools]
+* xref:agile-scrum.adoc[Agile Scrum Framework]
 
 

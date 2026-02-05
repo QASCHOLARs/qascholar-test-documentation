@@ -1,0 +1,53 @@
+
+== Introduction
+
+This section outlines the operations team responsibilities and procedures within the Insights platform that includes Lead Insights and Investor Insights tenants. It provides guidance on how to manage and maintain the system effectively, ensuring smooth operation and optimal performance.
+
+== Overview of Operations
+The operations team is responsible for the day-to-day management of the Insights platform. This includes monitoring system performance, managing deployments, handling incidents, and ensuring data integrity. The team works closely with development and support teams to address any issues that arise and to implement improvements.
+
+== Key Responsibilities
+The operations team has several key responsibilities, including:
+* **System Monitoring**: Continuously monitor the platform for performance issues, errors, and security threats using tools like Azure Monitor and Application Insights.
+* **Incident Management**: Respond to and resolve incidents promptly, following established protocols to minimize downtime and impact on users.
+* **Deployment Management**: Coordinate and manage the deployment of new features, updates, and patches to the platform, ensuring minimal disruption to users.
+* **Data Integrity**: Ensure the accuracy and consistency of data within the platform, performing regular audits and validations.
+* **Performance Optimization**: Identify and implement optimizations to improve system performance and user experience.
+* **Documentation**: Maintain comprehensive documentation of operational procedures, configurations, and incident reports.
+
+== Work Intake and Prioritization
+The operations team receives work requests through a structured intake process. Requests are prioritized based on their urgency, impact on users, and alignment with business goals. The team uses tools like Jira Kanban board to track and manage work items, ensuring that high-priority tasks are addressed promptly.
+
+The users of the appliction can submit requests through the following channels:
+
+* **Email**: 
+Users can send their requests directly to the operations team via a dedicated support email address. Each project has its own email alias to ensure that requests are routed to the appropriate team members.
+
+Upon sending emails to the designated email addresses, users will receive an automated acknowledgment confirming receipt of their request. The operations team is using Freshdesk that handle the creation of support tickets from incoming emails.
+
+The L1 support team will then evaluate the request, categorize it based on its nature (e.g., incident, service request, change request), and assign it a priority level according to predefined criteria. The L1 support team will then review the request, assess its priority based on urgency and impact, and respond accordingly within the established service level agreements (SLAs).
+
+If L1 support team is unable to resolve the request, it will be escalated to the L2 support team by assigning the ticket to them within Freshdesk for further investigation and resolution.
+
+The L2 support team will then evaluate the escalated request, perform a deeper analysis, and work towards resolving the issue. They will communicate with the L1 support team and the user as needed to provide updates and gather additional information. The operations team will then review the request, assess its priority based on urgency and impact, and respond accordingly within the established service level agreements (SLAs).
+
+* **Business Inquiry**:
+Users can submit their requests through the Business Inquiry form available on the applications. This form captures essential details about the request, allowing the operations team to assess and prioritize it effectively.
+
+
+== Tools and Technologies
+The operations team utilizes a variety of tools and technologies to manage the Insights platform effectively, including:
+
+== Best Practices for Operations Management
+To ensure effective operations management, the team follows several best practices:
+* **Proactive Monitoring**: Implement proactive monitoring to identify and address potential issues before they impact users.
+* **Clear Communication**: Maintain clear communication channels with development and support teams to ensure timely resolution of issues.
+* **Regular Training**: Provide ongoing training for operations team members to keep them updated on the latest tools, technologies, and best practices.
+* **Documentation**: Keep documentation up-to-date to ensure that all team members have access to the latest procedures and configurations.
+* **Continuous Improvement**: Regularly review and refine operational processes to enhance efficiency and effectiveness.
+
+== Conclusion
+Effective operations management is crucial for the success of the Insights platform. By following the outlined responsibilities,
+utilizing the right tools, and adhering to best practices, the operations team can ensure the platform remains reliable, performant, and secure for all users.
+
+
